@@ -3,35 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Galería de transformaciones - AQUACAR Autolavados">
+
     <title>Galería | AQUACAR Autolavados</title>
+
+    <meta name="description" content="Galería de transformaciones premium de AQUACAR Autolavados">
+
+    <!-- SEO -->
+    <meta property="og:title" content="Galería | AQUACAR">
+    <meta property="og:description" content="Transformaciones premium de detallado automotriz">
+    <meta property="og:image" content="img/0.png">
+    <meta property="og:type" content="website">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- GLightbox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 </head>
+
 <body class="custom-cursor">
-    <!-- Loading Screen -->
+
+    <!-- LOADING -->
     <div id="loadingScreen" class="loading-screen">
         <div class="loading-car">
             <i class="fas fa-car"></i>
         </div>
+
         <div class="loading-bar-container">
             <div class="loading-bar-fill" id="loadingBarFill"></div>
         </div>
-        <p class="loading-brand">AQUACAR <span>DIGITAL</span></p>
+
+        <p class="loading-brand">
+            AQUACAR <span>DIGITAL</span>
+        </p>
     </div>
 
-    <!-- Scroll Progress Bar -->
+    <!-- SCROLL BAR -->
     <div class="scroll-progress" id="scrollProgress"></div>
 
-    <!-- Header/Navegación -->
+    <!-- HEADER -->
     <header class="header" id="mainHeader">
+
         <div class="container">
+
             <div class="navbar">
+
+                <!-- LOGO -->
                 <a href="index.html" class="logo">
-                    <div class="logo-icon"><i class="fas fa-car"></i></div>
-                    <div class="logo-text">AQUA<span>CAR</span></div>
+                    <div class="logo-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+
+                    <div class="logo-text">
+                        AQUA<span>CAR</span>
+                    </div>
                 </a>
 
+                <!-- MENU -->
                 <nav class="nav-menu" id="navMenu">
                     <a href="index.html" class="nav-link">Inicio</a>
                     <a href="servicios.html" class="nav-link">Servicios</a>
@@ -42,305 +73,467 @@
                     <a href="contacto.html" class="nav-link">Contacto</a>
                 </nav>
 
+                <!-- ACTIONS -->
                 <div class="nav-actions">
-                    <div class="weather-mini" id="weatherMini">
+
+                    <div class="weather-mini">
                         <i class="fas fa-sun"></i>
                         <span>24°C</span>
                     </div>
-                    <button class="theme-toggle" id="themeToggle" title="Cambiar tema">
+
+                    <button class="theme-toggle" id="themeToggle">
                         <i class="fas fa-moon"></i>
                     </button>
+
                     <button class="menu-toggle" id="menuToggle">
                         <span></span>
                         <span></span>
                         <span></span>
                     </button>
+
                 </div>
+
             </div>
+
         </div>
+
     </header>
 
-    <!-- Mobile Fullscreen Menu -->
+    <!-- MOBILE MENU -->
     <div class="mobile-fullscreen-menu" id="mobileMenu">
+
         <a href="index.html" class="mobile-menu-link">Inicio</a>
+
         <a href="servicios.html" class="mobile-menu-link">Servicios</a>
+
         <a href="paquetes.html" class="mobile-menu-link">Paquetes</a>
+
         <a href="opiniones.html" class="mobile-menu-link">Opiniones</a>
+
         <a href="galeria.html" class="mobile-menu-link active">Galería</a>
-        <a href="extras.html" class="mobile-menu-link">Extras</a>
+
+        <a href="extras.html" class="mobile-menu-link">Cotiza tu servicio</a>
+
         <a href="contacto.html" class="mobile-menu-link">Contacto</a>
+
     </div>
 
-
-
-    <!-- Página Hero -->
+    <!-- HERO -->
     <section class="page-hero">
-        <div class="page-hero-background" style="background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663643512244/hbDWzUPmudCth5Kh98BVHM/aquacar-multipage-gallery-8k4WkSMuR3bwQmUEbXWPvE.webp');">
+
+        <div class="page-hero-background"
+            style="background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663643512244/hbDWzUPmudCth5Kh98BVHM/aquacar-multipage-gallery-8k4WkSMuR3bwQmUEbXWPvE.webp');">
+
             <div class="page-hero-overlay"></div>
+
         </div>
+
         <div class="page-hero-content">
+
             <h1>Galería de Transformaciones</h1>
+
             <p>Antes y después de nuestros servicios premium</p>
+
         </div>
+
     </section>
 
-    <!-- Galería -->
+    <!-- GALERÍA -->
     <section class="gallery-section">
+
         <div class="container">
+
+            <!-- TITULO -->
             <div class="section-header">
-                <h2 class="section-title">Nuestras Transformaciones</h2>
-                <p class="section-subtitle">Mira los resultados de nuestro trabajo profesional</p>
+
+                <h2 class="section-title">
+                    Nuestras Transformaciones
+                </h2>
+
+                <p class="section-subtitle">
+                    Mira los resultados de nuestro trabajo profesional
+                </p>
+
             </div>
 
-            <!-- Filtros -->
+            <!-- FILTROS -->
             <div class="gallery-filters">
+
                 <button class="filter-btn active" data-filter="all">Todos</button>
+
                 <button class="filter-btn" data-filter="sedan">Sedanes</button>
+
                 <button class="filter-btn" data-filter="suv">SUVs</button>
+
                 <button class="filter-btn" data-filter="truck">Camionetas</button>
-            </div>
 
-            <!-- Grid de Galería -->
-           <div class="gallery-grid">
-    <!-- Item 0 -->
-    <div class="gallery-item animate-on-scroll" data-category="sedan">
-        <div class="gallery-image-container">
-            <img src="img/0.png" alt="Transformación Auto 0">
-            <div class="gallery-overlay">
-                <button class="gallery-btn" data-lightbox="gallery" href="img/0.png">
-                    <i class="fas fa-search-plus"></i>
-                </button>
-            </div>
-        </div>
-        <h3>Auto 0</h3>
-        <p>Lavado Completo - Brillo Espejo</p>
-    </div>
+                <button class="filter-btn" data-filter="classic">Clásicos</button>
 
-    <!-- Item 1 -->
-    <div class="gallery-item animate-on-scroll" data-category="sedan" style="animation-delay: 0.1s;">
-        <div class="gallery-image-container">
-            <img src="img/1.png" alt="Transformación Auto 1">
-            <div class="gallery-overlay">
-                <button class="gallery-btn" data-lightbox="gallery" href="img/1.png">
-                    <i class="fas fa-search-plus"></i>
-                </button>
-            </div>
-        </div>
-        <h3>Auto 1</h3>
-        <p>Detallado Premium - Protección Cerámica</p>
-    </div>
+                <button class="filter-btn" data-filter="sports">Deportivos</button>
 
-    <!-- Item 2 -->
-    <div class="gallery-item animate-on-scroll" data-category="suv" style="animation-delay: 0.2s;">
-        <div class="gallery-image-container">
-            <img src="img/2.png" alt="Transformación Auto 2">
-            <div class="gallery-overlay">
-                <button class="gallery-btn" data-lightbox="gallery" href="img/2.png">
-                    <i class="fas fa-search-plus"></i>
-                </button>
-            </div>
-        </div>
-        <h3>Auto 2</h3>
-        <p>Lavado Básico - Resultado Profesional</p>
-    </div>
+                <button class="filter-btn" data-filter="luxury">Lujo</button>
 
-    <!-- Item 3 -->
-    <div class="gallery-item animate-on-scroll" data-category="truck" style="animation-delay: 0.3s;">
-        <div class="gallery-image-container">
-            <img src="img/3.png" alt="Transformación Auto 3">
-            <div class="gallery-overlay">
-                <button class="gallery-btn" data-lightbox="gallery" href="img/3.png">
-                    <i class="fas fa-search-plus"></i>
-                </button>
-            </div>
-        </div>
-        <h3>Auto 3</h3>
-        <p>Detallado Interior y Exterior</p>
-    </div>
-
-    <!-- Item 4 -->
-    <div class="gallery-item animate-on-scroll" data-category="classic" style="animation-delay: 0.4s;">
-        <div class="gallery-image-container">
-            <img src="img/4.png" alt="Transformación Auto 4">
-            <div class="gallery-overlay">
-                <button class="gallery-btn" data-lightbox="gallery" href="img/4.png">
-                    <i class="fas fa-search-plus"></i>
-                </button>
-            </div>
-        </div>
-        <h3>Auto 4</h3>
-        <p>Restauración Completa - Brillo Retro</p>
-    </div>
-
-    <!-- Item 5 -->
-    <div class="gallery-item animate-on-scroll" data-category="sports" style="animation-delay: 0.5s;">
-        <div class="gallery-image-container">
-            <img src="img/5.png" alt="Transformación Auto 5">
-            <div class="gallery-overlay">
-                <button class="gallery-btn" data-lightbox="gallery" href="img/5.png">
-                    <i class="fas fa-search-plus"></i>
-                </button>
-            </div>
-        </div>
-        <h3>Auto 5</h3>
-        <p>Lavado Premium - Detallado Deportivo</p>
-    </div>
-
-    <!-- Item 6 -->
-    <div class="gallery-item animate-on-scroll" data-category="luxury" style="animation-delay: 0.6s;">
-        <div class="gallery-image-container">
-            <img src="img/6.png" alt="Transformación Auto 6">
-            <div class="gallery-overlay">
-                <button class="gallery-btn" data-lightbox="gallery" href="img/6.png">
-                    <i class="fas fa-search-plus"></i>
-                </button>
-            </div>
-        </div>
-        <h3>Auto 6</h3>
-        <p>Protección Cerámica - Brillo Futurista</p>
-    </div>
-
-    <!-- Item 7 -->
-    <div class="gallery-item animate-on-scroll" data-category="suv" style="animation-delay: 0.7s;">
-        <div class="gallery-image-container">
-            <img src="img/7.png" alt="Transformación Auto 7">
-            <div class="gallery-overlay">
-                <button class="gallery-btn" data-lightbox="gallery" href="img/7.png">
-                    <i class="fas fa-search-plus"></i>
-                </button>
-            </div>
-        </div>
-        <h3>Auto 7</h3>
-        <p>Detallado Premium - Elegancia Todoterreno</p>
-    </div>
-
-    <!-- Item 8 -->
-    <div class="gallery-item animate-on-scroll" data-category="truck" style="animation-delay: 0.8s;">
-        <div class="gallery-image-container">
-            <img src="img/8.png" alt="Transformación Auto 8">
-            <div class="gallery-overlay">
-                <button class="gallery-btn" data-lightbox="gallery" href="img/8.png">
-                    <i class="fas fa-search-plus"></i>
-                </button>
-            </div>
-        </div>
-        <h3>Auto 8</h3>
-        <p>Lavado Completo - Fuerza y Estilo</p>
-    </div>
-
-    <!-- Item 9 -->
-    <div class="gallery-item animate-on-scroll" data-category="sedan" style="animation-delay: 0.9s;">
-        <div class="gallery-image-container">
-            <img src="img/9.png" alt="Transformación Auto 9">
-            <div class="gallery-overlay">
-                <button class="gallery-btn" data-lightbox="gallery" href="img/9.png">
-                    <i class="fas fa-search-plus"></i>
-                </button>
-            </div>
-        </div>
-        <h3>Auto 9</h3>
-        <p>Lavado Básico - Resultado Profesional</p>
-    </div>
-
-    <!-- Item 10 -->
-    <div class="gallery-item animate-on-scroll" data-category="suv" style="animation-delay: 1s;">
-        <div class="gallery-image-container">
-            <img src="img/10.png" alt="Transformación Auto 10">
-            <div class="gallery-overlay">
-                <button class="gallery-btn" data-lightbox="gallery" href="img/10.png">
-                    <i class="fas fa-search-plus"></i>
-                </button>
-            </div>
-        </div>
-        <h3>Auto 10</h3>
-        <p>Detallado Premium - Protección Total</p>
-    </div>
-
-    <!-- Item 11 -->
-    <div class="gallery-item animate-on-scroll" data-category="truck" style="animation-delay: 1.1s;">
-        <div class="gallery-image-container">
-            <img src="img/11.png" alt="Transformación Auto 11">
-            <div class="gallery-overlay">
-                <button class="gallery-btn" data-lightbox="gallery" href="img/11.png">
-                    <i class="fas fa-search-plus"></i>
-                </button>
-            </div>
-        </div>
-        <h3>Auto 11</h3>
-        <p>Lavado Completo - Fuerza y Estilo</p>
-    </div>
-</div>
+                <button class="filter-btn" data-filter="event">Eventos</button>
 
             </div>
+
+            <!-- GRID -->
+            <div class="gallery-grid">
+
+                <!-- ITEM -->
+                <div class="gallery-item animate-on-scroll" data-category="sedan">
+
+                    <div class="gallery-image-container">
+
+                        <img src="img/0.png"
+                             alt="Transformación Auto 0"
+                             loading="lazy">
+
+                        <div class="gallery-overlay">
+
+                            <a href="img/0.png"
+                               class="gallery-btn glightbox">
+
+                                <i class="fas fa-search-plus"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <h3>Auto 0</h3>
+
+                    <p>Lavado Completo - Brillo Espejo</p>
+
+                </div>
+
+                <!-- ITEM -->
+                <div class="gallery-item animate-on-scroll" data-category="sports">
+
+                    <div class="gallery-image-container">
+
+                        <img src="img/5.png"
+                             alt="Transformación Auto 5"
+                             loading="lazy">
+
+                        <div class="gallery-overlay">
+
+                            <a href="img/5.png"
+                               class="gallery-btn glightbox">
+
+                                <i class="fas fa-search-plus"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <h3>Auto Deportivo</h3>
+
+                    <p>Detallado Premium Deportivo</p>
+
+                </div>
+
+                <!-- ITEM -->
+                <div class="gallery-item animate-on-scroll" data-category="luxury">
+
+                    <div class="gallery-image-container">
+
+                        <img src="img/6.png"
+                             alt="Transformación Auto 6"
+                             loading="lazy">
+
+                        <div class="gallery-overlay">
+
+                            <a href="img/6.png"
+                               class="gallery-btn glightbox">
+
+                                <i class="fas fa-search-plus"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <h3>Auto Lujo</h3>
+
+                    <p>Protección Cerámica Premium</p>
+
+                </div>
+
+                <!-- ITEM -->
+                <div class="gallery-item animate-on-scroll" data-category="truck">
+
+                    <div class="gallery-image-container">
+
+                        <img src="img/8.png"
+                             alt="Transformación Auto 8"
+                             loading="lazy">
+
+                        <div class="gallery-overlay">
+
+                            <a href="img/8.png"
+                               class="gallery-btn glightbox">
+
+                                <i class="fas fa-search-plus"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <h3>Camioneta Premium</h3>
+
+                    <p>Lavado Completo - Fuerza y Estilo</p>
+
+                </div>
+
+                <!-- EVENTO -->
+                <div class="gallery-item animate-on-scroll" data-category="event">
+
+                    <div class="gallery-image-container">
+
+                        <img src="img/2025-07-02.jpg"
+                             alt="Evento Julio 2025"
+                             loading="lazy">
+
+                        <div class="gallery-overlay">
+
+                            <a href="img/2025-07-02.jpg"
+                               class="gallery-btn glightbox">
+
+                                <i class="fas fa-search-plus"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <h3>Evento Julio 2025</h3>
+
+                    <p>Celebración Especial AQUACAR</p>
+
+                </div>
+
+                <!-- EVENTO -->
+                <div class="gallery-item animate-on-scroll" data-category="event">
+
+                    <div class="gallery-image-container">
+
+                        <img src="img/2025-07-30.jpg"
+                             alt="Evento Julio 2025"
+                             loading="lazy">
+
+                        <div class="gallery-overlay">
+
+                            <a href="img/2025-07-30.jpg"
+                               class="gallery-btn glightbox">
+
+                                <i class="fas fa-search-plus"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <h3>Exhibición AQUACAR</h3>
+
+                    <p>Presentación Especial Julio 2025</p>
+
+                </div>
+
+            </div>
+
         </div>
+
     </section>
-
-    <!-- Lightbox Modal -->
-    <div id="lightboxModal" class="lightbox-modal">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" src="" alt="">
-        <div class="lightbox-nav">
-            <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
-            <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
-        </div>
-    </div>
 
     <!-- CTA -->
     <section class="cta-section">
+
         <div class="container">
+
             <h2>¿Tu auto podría verse así?</h2>
-            <p>Agenda tu cita ahora y descubre la diferencia que AQUACAR puede hacer</p>
-            <a href="contacto.html" class="btn btn-large">Agendar Ahora</a>
+
+            <p>
+                Agenda tu cita ahora y descubre la diferencia
+                que AQUACAR puede hacer
+            </p>
+
+            <a href="contacto.html"
+               class="btn btn-large">
+
+                Agendar Ahora
+
+            </a>
+
         </div>
+
     </section>
-    <!-- Footer -->
+
+    <!-- FOOTER -->
     <footer class="footer">
+
         <div class="container">
+
             <div class="footer-content">
+
                 <div class="footer-brand">
+
                     <a href="index.html" class="logo">
-                        <div class="logo-icon"><i class="fas fa-car"></i></div>
-                        <div class="logo-text">AQUACAR</div>
+
+                        <div class="logo-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+
+                        <div class="logo-text">
+                            AQUACAR
+                        </div>
+
                     </a>
-                    <p class="footer-tagline">SISTEMA DE INTERVENCIÓN<br>AUTOMOTRIZ PREMIUM.</p>
+
+                    <p class="footer-tagline">
+                        SISTEMA DE INTERVENCIÓN<br>
+                        AUTOMOTRIZ PREMIUM.
+                    </p>
+
                 </div>
 
                 <div class="footer-links-grid">
+
                     <div class="footer-section">
+
                         <h4>Sistema</h4>
+
                         <ul>
-                            <li><a href="servicios.html">Protocolos</a></li>
-                            <li><a href="paquetes.html">Precios</a></li>
+
+                            <li>
+                                <a href="servicios.html">Protocolos</a>
+                            </li>
+
+                            <li>
+                                <a href="paquetes.html">Precios</a>
+                            </li>
+
                         </ul>
+
                     </div>
+
                     <div class="footer-section">
+
                         <h4>Recursos</h4>
+
                         <ul>
-                            <li><a href="opiniones.html">Opiniones</a></li>
-                            <li><a href="galeria.html">Galería</a></li>
+
+                            <li>
+                                <a href="opiniones.html">Opiniones</a>
+                            </li>
+
+                            <li>
+                                <a href="galeria.html">Galería</a>
+                            </li>
+
                         </ul>
+
                     </div>
+
                     <div class="footer-section">
+
                         <h4>Cobertura</h4>
+
                         <ul>
-                            <li><a href="contacto.html">Ubicación</a></li>
-                            <li><a href="extras.html">Extras</a></li>
+
+                            <li>
+                                <a href="contacto.html">Ubicación</a>
+                            </li>
+
+                            <li>
+                                <a href="extras.html">Extras</a>
+                            </li>
+
                         </ul>
+
                     </div>
+
                 </div>
+
             </div>
 
             <div class="footer-bottom">
-                <p>© 2026 AQUACAR INTERNATIONAL — SJT HUB</p>
+
+                <p>
+                    © 2026 AQUACAR INTERNATIONAL — SJT HUB
+                </p>
+
             </div>
+
         </div>
+
     </footer>
 
-    <!-- Botón flotante de WhatsApp -->
-    <a href="https://wa.me/5543180287" target="_blank" class="whatsapp-button ripple-container" title="Contactar por WhatsApp">
+    <!-- WHATSAPP -->
+    <a href="https://wa.me/5543180287"
+       target="_blank"
+       class="whatsapp-button">
+
         <i class="fab fa-whatsapp"></i>
+
     </a>
 
+    <!-- JS -->
     <script src="js/script.js"></script>
+
+    <!-- GLIGHTBOX -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+    <script>
+        const lightbox = GLightbox({
+            selector: '.glightbox'
+        });
+
+        // FILTROS
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+
+            button.addEventListener('click', () => {
+
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                });
+
+                button.classList.add('active');
+
+                const filter = button.dataset.filter;
+
+                galleryItems.forEach(item => {
+
+                    if (
+                        filter === 'all' ||
+                        item.dataset.category === filter
+                    ) {
+
+                        item.style.display = 'block';
+
+                    } else {
+
+                        item.style.display = 'none';
+
+                    }
+
+                });
+
+            });
+
+        });
+    </script>
+
 </body>
 </html>
