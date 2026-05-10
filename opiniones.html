@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Opiniones y reseñas de clientes - AQUACAR Autolavados">
+    <title>Opiniones | AQUACAR Autolavados</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="custom-cursor">
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-car">
+            <i class="fas fa-car"></i>
+        </div>
+        <div class="loading-bar-container">
+            <div class="loading-bar-fill" id="loadingBarFill"></div>
+        </div>
+        <p class="loading-brand">AQUACAR <span>DIGITAL</span></p>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Header/Navegación -->
+    <header class="header" id="mainHeader">
+        <div class="container">
+            <div class="navbar">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"><i class="fas fa-car"></i></div>
+                    <div class="logo-text">AQUA<span>CAR</span></div>
+                </a>
+
+                <nav class="nav-menu" id="navMenu">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                    <a href="servicios.html" class="nav-link">Servicios</a>
+                    <a href="paquetes.html" class="nav-link">Paquetes</a>
+                    <a href="opiniones.html" class="nav-link active">Opiniones</a>
+                    <a href="galeria.html" class="nav-link">Galería</a>
+                    <a href="extras.html" class="nav-link">Cotiza tu servicio</a>
+                    <a href="contacto.html" class="nav-link">Contacto</a>
+                </nav>
+
+                <div class="nav-actions">
+                    <div class="weather-mini" id="weatherMini">
+                        <i class="fas fa-sun"></i>
+                        <span>24°C</span>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle" title="Cambiar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Fullscreen Menu -->
+    <div class="mobile-fullscreen-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-menu-link">Inicio</a>
+        <a href="servicios.html" class="mobile-menu-link">Servicios</a>
+        <a href="paquetes.html" class="mobile-menu-link">Paquetes</a>
+        <a href="opiniones.html" class="mobile-menu-link active">Opiniones</a>
+        <a href="galeria.html" class="mobile-menu-link">Galería</a>
+        <a href="extras.html" class="mobile-menu-link">Extras</a>
+        <a href="contacto.html" class="mobile-menu-link">Contacto</a>
+    </div>
+
+
+
+    <!-- Página Hero -->
+    <section class="page-hero">
+        <div class="page-hero-background" style="background: linear-gradient(135deg, #0A1F44 0%, #FF6B35 100%);">
+            <div class="page-hero-overlay"></div>
+        </div>
+        <div class="page-hero-content">
+            <h1>Opiniones de Clientes</h1>
+            <p>⭐ 4.7 de 5 - Basado en 183 reseñas</p>
+        </div>
+    </section>
+
+    <!-- Carrusel de Opiniones -->
+    <section class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+                <p class="section-subtitle">Satisfacción garantizada en cada servicio</p>
+            </div>
+
+            <!-- Carrusel -->
+            <div class="carousel-container">
+                <div class="carousel" id="reviewCarousel">
+                    <!-- Review 1 -->
+                    <div class="review-card active">
+                        <div class="review-header">
+                            <div class="review-avatar">👨‍💼</div>
+                            <div class="review-info">
+                                <h3>Carlos López</h3>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Autolavado muy completo, con paquetes variados y buen trato. El servicio premium es excepcional. Volveré cada mes."</p>
+                        <span class="review-date">Hace 2 semanas</span>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">👩‍💼</div>
+                            <div class="review-info">
+                                <h3>María García</h3>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Instalaciones cómodas y precios justos. Excelente servicio y muy profesionales. Mi auto quedó impecable."</p>
+                        <span class="review-date">Hace 1 semana</span>
+                    </div>
+
+                    <!-- Review 3 (Negativa) -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">👨‍💻</div>
+                            <div class="review-info">
+                                <h3>Juan Rodríguez</h3>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"El lavado estuvo bien, pero no aspiraron bien ni aplicaron crema en interiores y llantas como se esperaba. Mejorable."</p>
+                        <span class="review-date">Hace 3 días</span>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">👩‍🦰</div>
+                            <div class="review-info">
+                                <h3>Ana Martínez</h3>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Mi auto quedó impecable. Muy recomendado, volveré pronto. El equipo es muy atento y profesional."</p>
+                        <span class="review-date">Hace 5 días</span>
+                    </div>
+
+                    <!-- Review 5 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">👨‍🔧</div>
+                            <div class="review-info">
+                                <h3>Roberto Sánchez</h3>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Excelente servicio. El encerado dejó mi auto con un brillo increíble. Definitivamente es el mejor autolavado de la zona."</p>
+                        <span class="review-date">Hace 1 día</span>
+                    </div>
+                </div>
+
+                <!-- Controles del carrusel -->
+                <button class="carousel-button prev" id="prevReview">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-button next" id="nextReview">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <!-- Indicadores -->
+                <div class="carousel-indicators" id="reviewIndicators">
+                    <button class="indicator active" data-slide="0"></button>
+                    <button class="indicator" data-slide="1"></button>
+                    <button class="indicator" data-slide="2"></button>
+                    <button class="indicator" data-slide="3"></button>
+                    <button class="indicator" data-slide="4"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estadísticas -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-number">4.7</div>
+                    <div class="stat-label">Calificación Promedio</div>
+                    <div class="stat-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="stat-card animate-on-scroll" style="animation-delay: 0.1s;">
+                    <div class="stat-number">183</div>
+                    <div class="stat-label">Reseñas Verificadas</div>
+                </div>
+
+                <div class="stat-card animate-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Clientes Satisfechos</div>
+                </div>
+
+                <div class="stat-card animate-on-scroll" style="animation-delay: 0.3s;">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Años de Experiencia</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Listo para experimentar nuestro servicio?</h2>
+            <p>Únete a miles de clientes satisfechos en AQUACAR</p>
+            <a href="contacto.html" class="btn btn-large">Agendar Cita</a>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon"><i class="fas fa-car"></i></div>
+                        <div class="logo-text">AQUACAR</div>
+                    </a>
+                    <p class="footer-tagline">SISTEMA DE INTERVENCIÓN<br>AUTOMOTRIZ PREMIUM.</p>
+                </div>
+
+                <div class="footer-links-grid">
+                    <div class="footer-section">
+                        <h4>Sistema</h4>
+                        <ul>
+                            <li><a href="servicios.html">Protocolos</a></li>
+                            <li><a href="paquetes.html">Precios</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Recursos</h4>
+                        <ul>
+                            <li><a href="opiniones.html">Opiniones</a></li>
+                            <li><a href="galeria.html">Galería</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Cobertura</h4>
+                        <ul>
+                            <li><a href="contacto.html">Ubicación</a></li>
+                            <li><a href="extras.html">Extras</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 AQUACAR INTERNATIONAL — SJT HUB</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5543180287" target="_blank" class="whatsapp-button ripple-container" title="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

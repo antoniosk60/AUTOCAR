@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AQUACAR Autolavados - Servicio profesional de autolavado con tecnología de punta en San Juan Tlalpizahuac, Ixtapaluca">
+    <meta name="keywords" content="autolavado, lavado de autos, hidrolavadora, San Juan Tlalpizahuac, Ixtapaluca">
+    <title>AQUACAR Autolavados - Inicio | Servicio Profesional de Lavado</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="custom-cursor">
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-car">
+            <i class="fas fa-car"></i>
+        </div>
+        <div class="loading-bar-container">
+            <div class="loading-bar-fill" id="loadingBarFill"></div>
+        </div>
+        <p class="loading-brand">AQUACAR <span>DIGITAL</span></p>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Header/Navegación -->
+    <header class="header" id="mainHeader">
+        <div class="container">
+            <div class="navbar">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"><i class="fas fa-car"></i></div>
+                    <div class="logo-text">AQUA<span>CAR</span></div>
+                </a>
+
+                <!-- Menú de navegación -->
+                <nav class="nav-menu" id="navMenu">
+                    <a href="index.html" class="nav-link active">Inicio</a>
+                    <a href="servicios.html" class="nav-link">Servicios</a>
+                    <a href="paquetes.html" class="nav-link">Paquetes</a>
+                    <a href="opiniones.html" class="nav-link">Opiniones</a>
+                    <a href="galeria.html" class="nav-link">Galería</a>
+                    <a href="extras.html" class="nav-link">Cotiza tu servicio</a>
+                    <a href="contacto.html" class="nav-link">Contacto</a>
+                </nav>
+
+                <div class="nav-actions">
+                    <!-- Weather mini -->
+                    <div class="weather-mini" id="weatherMini">
+                        <i class="fas fa-sun"></i>
+                        <span>24°C</span>
+                    </div>
+
+                    <!-- Botón Dark Mode -->
+                    <button class="theme-toggle" id="themeToggle" title="Cambiar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+
+                    <!-- Menú hamburguesa -->
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Fullscreen Menu -->
+    <div class="mobile-fullscreen-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-menu-link active">Inicio</a>
+        <a href="servicios.html" class="mobile-menu-link">Servicios</a>
+        <a href="paquetes.html" class="mobile-menu-link">Paquetes</a>
+        <a href="opiniones.html" class="mobile-menu-link">Opiniones</a>
+        <a href="galeria.html" class="mobile-menu-link">Galería</a>
+        <a href="extras.html" class="mobile-menu-link">Extras</a>
+        <a href="contacto.html" class="mobile-menu-link">Contacto</a>
+    </div>
+
+    <!-- Sección Hero con Video/Imagen -->
+    <section class="hero" id="hero">
+        <div class="hero-background" style="background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663643512244/hbDWzUPmudCth5Kh98BVHM/aquacar-multipage-hero-V8hsDUnp3LC5xznqzVQG8g.webp');">
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+            <h1 class="hero-title fade-in-up">Innovación y tecnología en autolavado</h1>
+            <p class="hero-subtitle fade-in-up" style="animation-delay: 0.2s;">Servicio profesional con las mejores instalaciones y atención personalizada</p>
+            
+            <div class="hero-buttons fade-in-up" style="animation-delay: 0.4s;">
+                <a href="contacto.html" class="btn btn-primary">
+                    <i class="fas fa-calendar"></i> Agenda tu lavado
+                </a>
+                <a href="https://wa.me/5543180287" target="_blank" class="btn btn-secondary">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <!-- Indicador de scroll -->
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Información General -->
+    <section class="info-section">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card ripple-container">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Ubicación</h3>
+                    <p>Av. Cuauhtémoc 5301, San Juan Tlalpizahuac, Ixtapaluca</p>
+                </div>
+
+                <div class="info-card ripple-container">
+                    <i class="fas fa-phone"></i>
+                    <h3>Teléfono</h3>
+                    <a href="tel:5543180287">55 4318 0287</a>
+                </div>
+
+                <div class="info-card ripple-container">
+                    <i class="fas fa-clock"></i>
+                    <h3>Horario</h3>
+                    <p>Todos los días hasta las 7:00 PM</p>
+                </div>
+
+                <div class="info-card ripple-container">
+                    <i class="fas fa-star"></i>
+                    <h3>Calificación</h3>
+                    <p>⭐ 4.7 de 5 (183 reseñas)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Características Destacadas -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">¿Por qué elegirnos?</h2>
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Tecnología Premium</h3>
+                    <p>Hidrolavadoras de última generación para resultados impecables</p>
+                </div>
+
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Personal Capacitado</h3>
+                    <p>Equipo profesional con años de experiencia</p>
+                </div>
+
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Garantía de Satisfacción</h3>
+                    <p>100% satisfecho o reembolso garantizado</p>
+                </div>
+
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Eco-Friendly</h3>
+                    <p>Productos y procesos amigables con el ambiente</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="animate-on-scroll">¿Listo para transformar tu auto?</h2>
+            <p class="animate-on-scroll">Descubre nuestros paquetes premium y agenda tu cita hoy</p>
+            <a href="paquetes.html" class="btn btn-primary btn-large animate-on-scroll">Ver Paquetes</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon"><i class="fas fa-car"></i></div>
+                        <div class="logo-text">AQUACAR</div>
+                    </a>
+                    <p class="footer-tagline">SISTEMA DE INTERVENCIÓN<br>AUTOMOTRIZ PREMIUM.</p>
+                </div>
+
+                <div class="footer-links-grid">
+                    <div class="footer-section">
+                        <h4>Sistema</h4>
+                        <ul>
+                            <li><a href="servicios.html">Protocolos</a></li>
+                            <li><a href="paquetes.html">Precios</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Recursos</h4>
+                        <ul>
+                            <li><a href="opiniones.html">Opiniones</a></li>
+                            <li><a href="galeria.html">Galería</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Cobertura</h4>
+                        <ul>
+                            <li><a href="contacto.html">Ubicación</a></li>
+                            <li><a href="extras.html">Extras</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 AQUACAR INTERNATIONAL — SJT HUB</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5543180287" target="_blank" class="whatsapp-button ripple-container" title="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

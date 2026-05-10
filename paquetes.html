@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Paquetes y precios de AQUACAR Autolavados - Tabla comparativa">
+    <title>Paquetes y Precios | AQUACAR Autolavados</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="custom-cursor">
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-car">
+            <i class="fas fa-car"></i>
+        </div>
+        <div class="loading-bar-container">
+            <div class="loading-bar-fill" id="loadingBarFill"></div>
+        </div>
+        <p class="loading-brand">AQUACAR <span>DIGITAL</span></p>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Header/Navegación -->
+    <header class="header" id="mainHeader">
+        <div class="container">
+            <div class="navbar">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"><i class="fas fa-car"></i></div>
+                    <div class="logo-text">AQUA<span>CAR</span></div>
+                </a>
+
+                <nav class="nav-menu" id="navMenu">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                    <a href="servicios.html" class="nav-link">Servicios</a>
+                    <a href="paquetes.html" class="nav-link active">Paquetes</a>
+                    <a href="opiniones.html" class="nav-link">Opiniones</a>
+                    <a href="galeria.html" class="nav-link">Galería</a>
+                    <a href="extras.html" class="nav-link">Cotiza tu servicio</a>
+                    <a href="contacto.html" class="nav-link">Contacto</a>
+                </nav>
+
+                <div class="nav-actions">
+                    <div class="weather-mini" id="weatherMini">
+                        <i class="fas fa-sun"></i>
+                        <span>24°C</span>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle" title="Cambiar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Fullscreen Menu -->
+    <div class="mobile-fullscreen-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-menu-link">Inicio</a>
+        <a href="servicios.html" class="mobile-menu-link">Servicios</a>
+        <a href="paquetes.html" class="mobile-menu-link active">Paquetes</a>
+        <a href="opiniones.html" class="mobile-menu-link">Opiniones</a>
+        <a href="galeria.html" class="mobile-menu-link">Galería</a>
+        <a href="extras.html" class="mobile-menu-link">Extras</a>
+        <a href="contacto.html" class="mobile-menu-link">Contacto</a>
+    </div>
+
+
+
+    <!-- Página Hero -->
+    <section class="page-hero">
+        <div class="page-hero-background" style="background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663643512244/hbDWzUPmudCth5Kh98BVHM/aquacar-multipage-packages-DsX52vJtPe2Hje8SqRBcD7.webp');">
+            <div class="page-hero-overlay"></div>
+        </div>
+        <div class="page-hero-content">
+            <h1>Paquetes y Precios</h1>
+            <p>Elige el paquete que mejor se adapte a tus necesidades</p>
+        </div>
+    </section>
+
+    <!-- Paquetes -->
+    <section class="packages-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestros Paquetes Premium</h2>
+                <p class="section-subtitle">Todos incluyen garantía de satisfacción 100%</p>
+            </div>
+
+            <!-- Grid de Paquetes -->
+            <div class="packages-grid">
+                <!-- Paquete Básico -->
+                <div class="package-card animate-on-scroll">
+                    <div class="package-badge">Popular</div>
+                    <h3 class="package-name">Básico</h3>
+                    <p class="package-description">Esencial para un brillo diario</p>
+                    <div class="package-price">
+                        <span class="currency">$</span>
+                        <span class="amount">49.99</span>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Lavado exterior completo</li>
+                        <li><i class="fas fa-check"></i> Limpieza de llantas</li>
+                        <li><i class="fas fa-check"></i> Secado profesional</li>
+                        <li><i class="fas fa-check"></i> Limpieza de ventanas</li>
+                    </ul>
+                    <a href="contacto.html" class="btn btn-secondary">Reservar Ahora</a>
+                </div>
+
+                <!-- Paquete Detallado -->
+                <div class="package-card animate-on-scroll" style="animation-delay: 0.1s;">
+                    <h3 class="package-name">Detallado</h3>
+                    <p class="package-description">Limpieza profunda completa</p>
+                    <div class="package-price">
+                        <span class="currency">$</span>
+                        <span class="amount">99.99</span>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Todo incluido en Básico</li>
+                        <li><i class="fas fa-check"></i> Limpieza interior profunda</li>
+                        <li><i class="fas fa-check"></i> Limpieza de tablero</li>
+                        <li><i class="fas fa-check"></i> Aromatizante premium</li>
+                    </ul>
+                    <a href="contacto.html" class="btn btn-secondary">Reservar Ahora</a>
+                </div>
+
+                <!-- Paquete Encerado (Destacado) -->
+                <div class="package-card featured animate-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="package-badge featured-badge">
+                        <i class="fas fa-star"></i> MÁS POPULAR
+                    </div>
+                    <h3 class="package-name">Encerado Premium</h3>
+                    <p class="package-description">Protección y brillo duradero</p>
+                    <div class="package-price">
+                        <span class="currency">$</span>
+                        <span class="amount">149.99</span>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Todo incluido en Detallado</li>
+                        <li><i class="fas fa-check"></i> Encerado profesional</li>
+                        <li><i class="fas fa-check"></i> Protección UV</li>
+                        <li><i class="fas fa-check"></i> Brillo espejo garantizado</li>
+                    </ul>
+                    <a href="contacto.html" class="btn btn-primary">Reservar Ahora</a>
+                </div>
+
+                <!-- Paquete Aspirado Interior -->
+                <div class="package-card animate-on-scroll" style="animation-delay: 0.3s;">
+                    <h3 class="package-name">Aspirado Interior</h3>
+                    <p class="package-description">Limpieza interior especializada</p>
+                    <div class="package-price">
+                        <span class="currency">$</span>
+                        <span class="amount">79.99</span>
+                    </div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Aspirado profundo</li>
+                        <li><i class="fas fa-check"></i> Limpieza de tapetes</li>
+                        <li><i class="fas fa-check"></i> Limpieza de piso</li>
+                        <li><i class="fas fa-check"></i> Desodorización</li>
+                    </ul>
+                    <a href="contacto.html" class="btn btn-secondary">Reservar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabla Comparativa -->
+    <section class="comparison-section">
+        <div class="container">
+            <h2 class="section-title">Comparativa de Servicios</h2>
+            <div class="table-responsive">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Servicio</th>
+                            <th>Básico</th>
+                            <th>Detallado</th>
+                            <th>Encerado</th>
+                            <th>Aspirado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lavado Exterior</td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                            <td><i class="fas fa-times text-danger"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Limpieza Interior</td>
+                            <td><i class="fas fa-times text-danger"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Encerado</td>
+                            <td><i class="fas fa-times text-danger"></i></td>
+                            <td><i class="fas fa-times text-danger"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                            <td><i class="fas fa-times text-danger"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Protección UV</td>
+                            <td><i class="fas fa-times text-danger"></i></td>
+                            <td><i class="fas fa-times text-danger"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                            <td><i class="fas fa-times text-danger"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Aromatizante</td>
+                            <td><i class="fas fa-times text-danger"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Tiempo Estimado</td>
+                            <td>30 min</td>
+                            <td>45 min</td>
+                            <td>60 min</td>
+                            <td>40 min</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promoción -->
+    <section class="promotion-section">
+        <div class="container">
+            <div class="promotion-card">
+                <h2>🎉 Promoción Especial</h2>
+                <p>Lavado + Encerado <span class="discount-badge">20% OFF</span></p>
+                <p class="promotion-subtitle">Válido hasta fin de mes. No acumulable con otras promociones.</p>
+                <a href="contacto.html" class="btn btn-large">Aprovechar Oferta</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Aún no sabes cuál elegir?</h2>
+            <p>Nuestro equipo te ayudará a elegir el paquete perfecto para tu vehículo</p>
+            <a href="contacto.html" class="btn btn-large">Contactar Ahora</a>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon"><i class="fas fa-car"></i></div>
+                        <div class="logo-text">AQUACAR</div>
+                    </a>
+                    <p class="footer-tagline">SISTEMA DE INTERVENCIÓN<br>AUTOMOTRIZ PREMIUM.</p>
+                </div>
+
+                <div class="footer-links-grid">
+                    <div class="footer-section">
+                        <h4>Sistema</h4>
+                        <ul>
+                            <li><a href="servicios.html">Protocolos</a></li>
+                            <li><a href="paquetes.html">Precios</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Recursos</h4>
+                        <ul>
+                            <li><a href="opiniones.html">Opiniones</a></li>
+                            <li><a href="galeria.html">Galería</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Cobertura</h4>
+                        <ul>
+                            <li><a href="contacto.html">Ubicación</a></li>
+                            <li><a href="extras.html">Extras</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 AQUACAR INTERNATIONAL — SJT HUB</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5543180287" target="_blank" class="whatsapp-button ripple-container" title="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

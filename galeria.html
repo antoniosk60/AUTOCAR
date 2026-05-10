@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galería de transformaciones - AQUACAR Autolavados">
+    <title>Galería | AQUACAR Autolavados</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="custom-cursor">
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-car">
+            <i class="fas fa-car"></i>
+        </div>
+        <div class="loading-bar-container">
+            <div class="loading-bar-fill" id="loadingBarFill"></div>
+        </div>
+        <p class="loading-brand">AQUACAR <span>DIGITAL</span></p>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Header/Navegación -->
+    <header class="header" id="mainHeader">
+        <div class="container">
+            <div class="navbar">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"><i class="fas fa-car"></i></div>
+                    <div class="logo-text">AQUA<span>CAR</span></div>
+                </a>
+
+                <nav class="nav-menu" id="navMenu">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                    <a href="servicios.html" class="nav-link">Servicios</a>
+                    <a href="paquetes.html" class="nav-link">Paquetes</a>
+                    <a href="opiniones.html" class="nav-link">Opiniones</a>
+                    <a href="galeria.html" class="nav-link active">Galería</a>
+                    <a href="extras.html" class="nav-link">Cotiza tu servicio</a>
+                    <a href="contacto.html" class="nav-link">Contacto</a>
+                </nav>
+
+                <div class="nav-actions">
+                    <div class="weather-mini" id="weatherMini">
+                        <i class="fas fa-sun"></i>
+                        <span>24°C</span>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle" title="Cambiar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Fullscreen Menu -->
+    <div class="mobile-fullscreen-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-menu-link">Inicio</a>
+        <a href="servicios.html" class="mobile-menu-link">Servicios</a>
+        <a href="paquetes.html" class="mobile-menu-link">Paquetes</a>
+        <a href="opiniones.html" class="mobile-menu-link">Opiniones</a>
+        <a href="galeria.html" class="mobile-menu-link active">Galería</a>
+        <a href="extras.html" class="mobile-menu-link">Extras</a>
+        <a href="contacto.html" class="mobile-menu-link">Contacto</a>
+    </div>
+
+
+
+    <!-- Página Hero -->
+    <section class="page-hero">
+        <div class="page-hero-background" style="background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663643512244/hbDWzUPmudCth5Kh98BVHM/aquacar-multipage-gallery-8k4WkSMuR3bwQmUEbXWPvE.webp');">
+            <div class="page-hero-overlay"></div>
+        </div>
+        <div class="page-hero-content">
+            <h1>Galería de Transformaciones</h1>
+            <p>Antes y después de nuestros servicios premium</p>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestras Transformaciones</h2>
+                <p class="section-subtitle">Mira los resultados de nuestro trabajo profesional</p>
+            </div>
+
+            <!-- Filtros -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="sedan">Sedanes</button>
+                <button class="filter-btn" data-filter="suv">SUVs</button>
+                <button class="filter-btn" data-filter="truck">Camionetas</button>
+            </div>
+
+            <!-- Grid de Galería -->
+            <div class="gallery-grid">
+                <!-- Item 1 -->
+                <div class="gallery-item animate-on-scroll" data-category="sedan">
+                    <div class="gallery-image-container">
+                        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663643512244/hbDWzUPmudCth5Kh98BVHM/aquacar-multipage-gallery-8k4WkSMuR3bwQmUEbXWPvE.webp" alt="Transformación Mercedes Benz">
+                        <div class="gallery-overlay">
+                            <button class="gallery-btn" data-lightbox="gallery" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663643512244/hbDWzUPmudCth5Kh98BVHM/aquacar-multipage-gallery-8k4WkSMuR3bwQmUEbXWPvE.webp">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3>Mercedes Benz Rojo</h3>
+                    <p>Transformación Completa - Encerado Premium</p>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="gallery-item animate-on-scroll" data-category="suv" style="animation-delay: 0.1s;">
+                    <div class="gallery-image-container">
+                        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663643512244/hbDWzUPmudCth5Kh98BVHM/aquacar-multipage-hero-V8hsDUnp3LC5xznqzVQG8g.webp" alt="Transformación BMW X5">
+                        <div class="gallery-overlay">
+                            <button class="gallery-btn" data-lightbox="gallery" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663643512244/hbDWzUPmudCth5Kh98BVHM/aquacar-multipage-hero-V8hsDUnp3LC5xznqzVQG8g.webp">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3>BMW X5 Negro</h3>
+                    <p>Detallado Premium - Protección Cerámico</p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="gallery-item animate-on-scroll" data-category="sedan" style="animation-delay: 0.2s;">
+                    <div class="gallery-image-container">
+                        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663643512244/hbDWzUPmudCth5Kh98BVHM/aquacar-multipage-services-NzC3aEoKg9DLJxN7kMpqGY.webp" alt="Transformación Audi A4">
+                        <div class="gallery-overlay">
+                            <button class="gallery-btn" data-lightbox="gallery" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663643512244/hbDWzUPmudCth5Kh98BVHM/aquacar-multipage-services-NzC3aEoKg9DLJxN7kMpqGY.webp">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3>Audi A4 Blanco</h3>
+                    <p>Lavado Completo - Brillo Espejo</p>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="gallery-item animate-on-scroll" data-category="truck" style="animation-delay: 0.3s;">
+                    <div class="gallery-image-container">
+                        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663643512244/hbDWzUPmudCth5Kh98BVHM/aquacar-multipage-contact-SNXSytHTFHgbBqoSZYPnan.webp" alt="Transformación Ford F-150">
+                        <div class="gallery-overlay">
+                            <button class="gallery-btn" data-lightbox="gallery" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663643512244/hbDWzUPmudCth5Kh98BVHM/aquacar-multipage-contact-SNXSytHTFHgbBqoSZYPnan.webp">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3>Ford F-150 Gris</h3>
+                    <p>Detallado Interior y Exterior</p>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="gallery-item animate-on-scroll" data-category="suv" style="animation-delay: 0.4s;">
+                    <div class="gallery-image-container">
+                        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663643512244/hbDWzUPmudCth5Kh98BVHM/aquacar-multipage-packages-DsX52vJtPe2Hje8SqRBcD7.webp" alt="Transformación Jeep Wrangler">
+                        <div class="gallery-overlay">
+                            <button class="gallery-btn" data-lightbox="gallery" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663643512244/hbDWzUPmudCth5Kh98BVHM/aquacar-multipage-packages-DsX52vJtPe2Hje8SqRBcD7.webp">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3>Jeep Wrangler Azul</h3>
+                    <p>Encerado Premium - Protección Total</p>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="gallery-item animate-on-scroll" data-category="sedan" style="animation-delay: 0.5s;">
+                    <div class="gallery-image-container">
+                        <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663643512244/hbDWzUPmudCth5Kh98BVHM/aquacar-multipage-hero-V8hsDUnp3LC5xznqzVQG8g.webp" alt="Transformación Toyota Corolla">
+                        <div class="gallery-overlay">
+                            <button class="gallery-btn" data-lightbox="gallery" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663643512244/hbDWzUPmudCth5Kh98BVHM/aquacar-multipage-hero-V8hsDUnp3LC5xznqzVQG8g.webp">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3>Toyota Corolla Plata</h3>
+                    <p>Lavado Básico - Resultado Profesional</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" src="" alt="">
+        <div class="lightbox-nav">
+            <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Tu auto podría verse así?</h2>
+            <p>Agenda tu cita ahora y descubre la diferencia que AQUACAR puede hacer</p>
+            <a href="contacto.html" class="btn btn-large">Agendar Ahora</a>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon"><i class="fas fa-car"></i></div>
+                        <div class="logo-text">AQUACAR</div>
+                    </a>
+                    <p class="footer-tagline">SISTEMA DE INTERVENCIÓN<br>AUTOMOTRIZ PREMIUM.</p>
+                </div>
+
+                <div class="footer-links-grid">
+                    <div class="footer-section">
+                        <h4>Sistema</h4>
+                        <ul>
+                            <li><a href="servicios.html">Protocolos</a></li>
+                            <li><a href="paquetes.html">Precios</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Recursos</h4>
+                        <ul>
+                            <li><a href="opiniones.html">Opiniones</a></li>
+                            <li><a href="galeria.html">Galería</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Cobertura</h4>
+                        <ul>
+                            <li><a href="contacto.html">Ubicación</a></li>
+                            <li><a href="extras.html">Extras</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 AQUACAR INTERNATIONAL — SJT HUB</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5543180287" target="_blank" class="whatsapp-button ripple-container" title="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

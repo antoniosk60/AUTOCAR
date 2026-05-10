@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Servicios profesionales de autolavado - AQUACAR Autolavados">
+    <title>Servicios | AQUACAR Autolavados</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="custom-cursor">
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-car">
+            <i class="fas fa-car"></i>
+        </div>
+        <div class="loading-bar-container">
+            <div class="loading-bar-fill" id="loadingBarFill"></div>
+        </div>
+        <p class="loading-brand">AQUACAR <span>DIGITAL</span></p>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Header/Navegación -->
+    <header class="header" id="mainHeader">
+        <div class="container">
+            <div class="navbar">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"><i class="fas fa-car"></i></div>
+                    <div class="logo-text">AQUA<span>CAR</span></div>
+                </a>
+
+                <nav class="nav-menu" id="navMenu">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                    <a href="servicios.html" class="nav-link active">Servicios</a>
+                    <a href="paquetes.html" class="nav-link">Paquetes</a>
+                    <a href="opiniones.html" class="nav-link">Opiniones</a>
+                    <a href="galeria.html" class="nav-link">Galería</a>
+                    <a href="extras.html" class="nav-link">Cotiza tu servicio</a>
+                    <a href="contacto.html" class="nav-link">Contacto</a>
+                </nav>
+
+                <div class="nav-actions">
+                    <div class="weather-mini" id="weatherMini">
+                        <i class="fas fa-sun"></i>
+                        <span>24°C</span>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle" title="Cambiar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Fullscreen Menu -->
+    <div class="mobile-fullscreen-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-menu-link">Inicio</a>
+        <a href="servicios.html" class="mobile-menu-link active">Servicios</a>
+        <a href="paquetes.html" class="mobile-menu-link">Paquetes</a>
+        <a href="opiniones.html" class="mobile-menu-link">Opiniones</a>
+        <a href="galeria.html" class="mobile-menu-link">Galería</a>
+        <a href="extras.html" class="mobile-menu-link">Extras</a>
+        <a href="contacto.html" class="mobile-menu-link">Contacto</a>
+    </div>
+
+
+
+    <!-- Página de Servicios -->
+    <section class="page-hero">
+        <div class="page-hero-background" style="background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663643512244/hbDWzUPmudCth5Kh98BVHM/aquacar-multipage-services-NzC3aEoKg9DLJxN7kMpqGY.webp');">
+            <div class="page-hero-overlay"></div>
+        </div>
+        <div class="page-hero-content">
+            <h1>Nuestros Servicios</h1>
+            <p>Descubre todas las opciones de lavado y cuidado para tu vehículo</p>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Servicios Profesionales</h2>
+                <p class="section-subtitle">Contamos con instalaciones modernas y personal capacitado</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Servicio 1 -->
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Lavado Profesional</h3>
+                    <p>Con hidrolavadoras de última tecnología y espuma premium para un resultado impecable</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Lavado exterior completo</li>
+                        <li><i class="fas fa-check"></i> Secado profesional</li>
+                        <li><i class="fas fa-check"></i> Limpieza de llantas</li>
+                    </ul>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="service-card animate-on-scroll" style="animation-delay: 0.1s;">
+                    <div class="service-icon">
+                        <i class="fas fa-couch"></i>
+                    </div>
+                    <h3>Sala de Espera Cómoda</h3>
+                    <p>Relájate en nuestras instalaciones modernas con WiFi gratuito mientras tu auto se transforma</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Sillones cómodos</li>
+                        <li><i class="fas fa-check"></i> WiFi de alta velocidad</li>
+                        <li><i class="fas fa-check"></i> Bebidas complementarias</li>
+                    </ul>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="service-card animate-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="service-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Área de Juegos</h3>
+                    <p>Espacio seguro y divertido para que los niños se diviertan mientras esperas</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Juegos interactivos</li>
+                        <li><i class="fas fa-check"></i> Supervisión constante</li>
+                        <li><i class="fas fa-check"></i> Ambiente seguro</li>
+                    </ul>
+                </div>
+
+                <!-- Servicio 4 -->
+                <div class="service-card animate-on-scroll" style="animation-delay: 0.3s;">
+                    <div class="service-icon">
+                        <i class="fas fa-toilet"></i>
+                    </div>
+                    <h3>Baños Limpios</h3>
+                    <p>Instalaciones impecables con productos premium para tu comodidad</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Limpieza constante</li>
+                        <li><i class="fas fa-check"></i> Productos de calidad</li>
+                        <li><i class="fas fa-check"></i> Ambiente moderno</li>
+                    </ul>
+                </div>
+
+                <!-- Servicio 5 -->
+                <div class="service-card animate-on-scroll" style="animation-delay: 0.4s;">
+                    <div class="service-icon">
+                        <i class="fas fa-sparkles"></i>
+                    </div>
+                    <h3>Detallado Interior</h3>
+                    <p>Limpieza profunda del interior de tu vehículo con productos especializados</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Aspirado profundo</li>
+                        <li><i class="fas fa-check"></i> Limpieza de tapetes</li>
+                        <li><i class="fas fa-check"></i> Aromatización</li>
+                    </ul>
+                </div>
+
+                <!-- Servicio 6 -->
+                <div class="service-card animate-on-scroll" style="animation-delay: 0.5s;">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Protección de Pintura</h3>
+                    <p>Recubrimiento cerámico profesional para proteger y mantener el brillo de tu auto</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Protección UV</li>
+                        <li><i class="fas fa-check"></i> Brillo duradero</li>
+                        <li><i class="fas fa-check"></i> Fácil mantenimiento</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Por qué elegirnos -->
+    <section class="why-us-section">
+        <div class="container">
+            <h2 class="section-title">¿Por qué confiar en AQUACAR?</h2>
+            <div class="why-us-grid">
+                <div class="why-us-card">
+                    <div class="why-us-number">01</div>
+                    <h3>Experiencia</h3>
+                    <p>Más de 10 años sirviendo a la comunidad con excelencia</p>
+                </div>
+                <div class="why-us-card">
+                    <div class="why-us-number">02</div>
+                    <h3>Tecnología</h3>
+                    <p>Equipos de última generación para mejores resultados</p>
+                </div>
+                <div class="why-us-card">
+                    <div class="why-us-number">03</div>
+                    <h3>Profesionalismo</h3>
+                    <p>Personal capacitado y comprometido con tu satisfacción</p>
+                </div>
+                <div class="why-us-card">
+                    <div class="why-us-number">04</div>
+                    <h3>Garantía</h3>
+                    <p>100% satisfecho o reembolso sin preguntas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Listo para un lavado profesional?</h2>
+            <p>Agenda tu cita hoy y disfruta de nuestros servicios premium</p>
+            <a href="contacto.html" class="btn btn-large">Agendar Ahora</a>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon"><i class="fas fa-car"></i></div>
+                        <div class="logo-text">AQUACAR</div>
+                    </a>
+                    <p class="footer-tagline">SISTEMA DE INTERVENCIÓN<br>AUTOMOTRIZ PREMIUM.</p>
+                </div>
+
+                <div class="footer-links-grid">
+                    <div class="footer-section">
+                        <h4>Sistema</h4>
+                        <ul>
+                            <li><a href="servicios.html">Protocolos</a></li>
+                            <li><a href="paquetes.html">Precios</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Recursos</h4>
+                        <ul>
+                            <li><a href="opiniones.html">Opiniones</a></li>
+                            <li><a href="galeria.html">Galería</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Cobertura</h4>
+                        <ul>
+                            <li><a href="contacto.html">Ubicación</a></li>
+                            <li><a href="extras.html">Extras</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 AQUACAR INTERNATIONAL — SJT HUB</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5543180287" target="_blank" class="whatsapp-button ripple-container" title="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

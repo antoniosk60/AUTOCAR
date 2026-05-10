@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Herramientas extras - Calculadora, Clima, Dark Mode">
+    <title>Cotiza tu servicio | AQUACAR Autolavados</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="custom-cursor">
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-car">
+            <i class="fas fa-car"></i>
+        </div>
+        <div class="loading-bar-container">
+            <div class="loading-bar-fill" id="loadingBarFill"></div>
+        </div>
+        <p class="loading-brand">AQUACAR <span>DIGITAL</span></p>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Header/Navegación -->
+    <header class="header" id="mainHeader">
+        <div class="container">
+            <div class="navbar">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"><i class="fas fa-car"></i></div>
+                    <div class="logo-text">AQUA<span>CAR</span></div>
+                </a>
+
+                <nav class="nav-menu" id="navMenu">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                    <a href="servicios.html" class="nav-link">Servicios</a>
+                    <a href="paquetes.html" class="nav-link">Paquetes</a>
+                    <a href="opiniones.html" class="nav-link">Opiniones</a>
+                    <a href="galeria.html" class="nav-link">Galería</a>
+                    <a href="extras.html" class="nav-link active">Cotiza tu servicio</a>
+                    <a href="contacto.html" class="nav-link">Contacto</a>
+                </nav>
+
+                <div class="nav-actions">
+                    <div class="weather-mini" id="weatherMini">
+                        <i class="fas fa-sun"></i>
+                        <span>24°C</span>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle" title="Cambiar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Fullscreen Menu -->
+    <div class="mobile-fullscreen-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-menu-link">Inicio</a>
+        <a href="servicios.html" class="mobile-menu-link">Servicios</a>
+        <a href="paquetes.html" class="mobile-menu-link">Paquetes</a>
+        <a href="opiniones.html" class="mobile-menu-link">Opiniones</a>
+        <a href="galeria.html" class="mobile-menu-link">Galería</a>
+        <a href="extras.html" class="mobile-menu-link active">Extras</a>
+        <a href="contacto.html" class="mobile-menu-link">Contacto</a>
+    </div>
+
+
+
+    <!-- Página Hero -->
+    <section class="page-hero">
+        <div class="page-hero-background" style="background: linear-gradient(135deg, #0A1F44 0%, #FF6B35 100%);">
+            <div class="page-hero-overlay"></div>
+        </div>
+        <div class="page-hero-content">
+            <h1>Herramientas Extras</h1>
+            <p>Calculadora, Clima en Tiempo Real y Más</p>
+        </div>
+    </section>
+
+    <!-- Contenido de Extras -->
+    <section class="extras-section">
+        <div class="container">
+            <!-- Widget de Clima -->
+            <div class="extras-card animate-on-scroll">
+                <div class="extras-header">
+                    <i class="fas fa-cloud-sun"></i>
+                    <h2>Clima en Tiempo Real</h2>
+                </div>
+                <div class="weather-display">
+                    <div class="weather-main">
+                        <div class="weather-icon-large">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <div class="weather-details">
+                            <p class="weather-temp-large">24°C</p>
+                            <p class="weather-condition">Soleado</p>
+                        </div>
+                    </div>
+                    <div class="weather-info-grid">
+                        <div class="weather-info-item">
+                            <i class="fas fa-droplet"></i>
+                            <span>Humedad: 65%</span>
+                        </div>
+                        <div class="weather-info-item">
+                            <i class="fas fa-wind"></i>
+                            <span>Viento: 12 km/h</span>
+                        </div>
+                    </div>
+                    <p class="weather-message">☀️ Día perfecto para un brillo espejo. ¡Agenda tu lavado ahora!</p>
+                </div>
+            </div>
+
+            <!-- Calculadora de Cotización -->
+            <div class="extras-card animate-on-scroll" style="animation-delay: 0.1s;">
+                <div class="extras-header">
+                    <i class="fas fa-calculator"></i>
+                    <h2>Calculadora de Cotización</h2>
+                </div>
+                
+                <div class="calculator-form">
+                    <!-- Tamaño del Auto -->
+                    <div class="form-group">
+                        <label>Tamaño del Auto</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="carSize" value="sedan" checked>
+                                <span>Sedán</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="carSize" value="suv">
+                                <span>SUV</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="carSize" value="truck">
+                                <span>Camioneta</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Nivel de Suciedad -->
+                    <div class="form-group">
+                        <label>Nivel de Suciedad</label>
+                        <select id="dirtLevel" class="form-control">
+                            <option value="light">Ligero</option>
+                            <option value="moderate" selected>Moderado</option>
+                            <option value="dirty">Muy Sucio</option>
+                        </select>
+                    </div>
+
+                    <!-- Servicios Adicionales -->
+                    <div class="form-group">
+                        <label>Servicios Adicionales</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="extras" value="premiumFoam" data-price="15">
+                                <span>Espuma Premium (+$15)</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="extras" value="tireShine" data-price="10">
+                                <span>Brillo de Llantas (+$10)</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="extras" value="paintProtection" data-price="25">
+                                <span>Protección de Pintura (+$25)</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="extras" value="fragrance" data-price="5">
+                                <span>Fragancia Interior (+$5)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Resultado -->
+                    <div class="calculator-result">
+                        <div class="result-item">
+                            <span>Precio Base:</span>
+                            <span id="basePrice">$49.99</span>
+                        </div>
+                        <div class="result-item">
+                            <span>Extras:</span>
+                            <span id="extrasPrice">$0.00</span>
+                        </div>
+                        <div class="result-total">
+                            <span>Total Estimado:</span>
+                            <span id="totalPrice">$49.99</span>
+                        </div>
+                        <div class="result-time">
+                            <i class="fas fa-clock"></i>
+                            <span>Tiempo: <strong id="timeEstimate">30</strong> minutos</span>
+                        </div>
+                    </div>
+
+                    <a href="contacto.html" class="btn btn-primary btn-block">Agendar con este Presupuesto</a>
+                </div>
+            </div>
+
+            <!-- Modo Oscuro/Claro -->
+            <div class="extras-card animate-on-scroll" style="animation-delay: 0.2s;">
+                <div class="extras-header">
+                    <i class="fas fa-palette"></i>
+                    <h2>Modo Oscuro/Claro</h2>
+                </div>
+                
+                <div class="theme-selector">
+                    <p>El sitio se adapta automáticamente a tu preferencia de tema. Usa el botón en la esquina superior derecha para cambiar.</p>
+                    
+                    <div class="theme-preview">
+                        <div class="theme-option light-theme">
+                            <div class="theme-preview-box"></div>
+                            <p>Modo Claro</p>
+                        </div>
+                        <div class="theme-option dark-theme">
+                            <div class="theme-preview-box"></div>
+                            <p>Modo Oscuro</p>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-secondary" id="toggleThemeDemo">
+                        <i class="fas fa-moon"></i> Cambiar Tema
+                    </button>
+                </div>
+            </div>
+
+            <!-- Información Adicional -->
+            <div class="extras-card animate-on-scroll" style="animation-delay: 0.3s;">
+                <div class="extras-header">
+                    <i class="fas fa-info-circle"></i>
+                    <h2>Información Útil</h2>
+                </div>
+                
+                <div class="info-list">
+                    <div class="info-item">
+                        <h3><i class="fas fa-check-circle"></i> Garantía de Satisfacción</h3>
+                        <p>Si no estás completamente satisfecho, te ofrecemos un reembolso del 100% sin preguntas.</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3><i class="fas fa-leaf"></i> Productos Eco-Friendly</h3>
+                        <p>Utilizamos productos biodegradables y amigables con el ambiente en todos nuestros servicios.</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3><i class="fas fa-shield-alt"></i> Protección de Pintura</h3>
+                        <p>Nuestro recubrimiento cerámico protege tu auto de rayos UV, lluvia ácida y contaminación.</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3><i class="fas fa-clock"></i> Tiempos Rápidos</h3>
+                        <p>Desde 30 minutos para un lavado básico hasta 60 minutos para servicios completos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Listo para usar nuestras herramientas?</h2>
+            <p>Calcula tu presupuesto y agenda tu cita hoy mismo</p>
+            <a href="contacto.html" class="btn btn-large">Ir a Contacto</a>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon"><i class="fas fa-car"></i></div>
+                        <div class="logo-text">AQUACAR</div>
+                    </a>
+                    <p class="footer-tagline">SISTEMA DE INTERVENCIÓN<br>AUTOMOTRIZ PREMIUM.</p>
+                </div>
+
+                <div class="footer-links-grid">
+                    <div class="footer-section">
+                        <h4>Sistema</h4>
+                        <ul>
+                            <li><a href="servicios.html">Protocolos</a></li>
+                            <li><a href="paquetes.html">Precios</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Recursos</h4>
+                        <ul>
+                            <li><a href="opiniones.html">Opiniones</a></li>
+                            <li><a href="galeria.html">Galería</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Cobertura</h4>
+                        <ul>
+                            <li><a href="contacto.html">Ubicación</a></li>
+                            <li><a href="extras.html">Extras</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 AQUACAR INTERNATIONAL — SJT HUB</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5543180287" target="_blank" class="whatsapp-button ripple-container" title="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
