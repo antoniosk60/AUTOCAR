@@ -3,537 +3,561 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Galería | AQUACAR Autolavados</title>
-
     <meta name="description" content="Galería de transformaciones premium de AQUACAR Autolavados">
-
-    <!-- SEO -->
     <meta property="og:title" content="Galería | AQUACAR">
     <meta property="og:description" content="Transformaciones premium de detallado automotriz">
     <meta property="og:image" content="img/0.png">
     <meta property="og:type" content="website">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="css/estilos.css">
-
-    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- GLightbox -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --g-black:    #04070F;
+            --g-dark:     #080D1A;
+            --g-surface:  #0D1426;
+            --g-card:     #111B2E;
+            --g-border:   rgba(0,224,255,0.12);
+            --g-cyan:     #00E4FF;
+            --g-cyan-dim: rgba(0,228,255,0.18);
+            --g-gold:     #FFB800;
+            --g-gold-dim: rgba(255,184,0,0.15);
+            --g-text:     #D0E8FF;
+            --g-muted:    #5A7A9A;
+            --g-white:    #ECFAFF;
+            --glow-cyan:  0 0 30px rgba(0,228,255,0.35), 0 0 60px rgba(0,228,255,0.15);
+            --glow-gold:  0 0 20px rgba(255,184,0,0.4),  0 0 50px rgba(255,184,0,0.15);
+        }
+        body { background: var(--g-black) !important; color: var(--g-text) !important; font-family: 'Rajdhani', sans-serif !important; }
+        #particles-bg { position:fixed; inset:0; pointer-events:none; z-index:0; overflow:hidden; }
+        .particle { position:absolute; border-radius:50%; animation:floatParticle linear infinite; opacity:0; }
+        @keyframes floatParticle {
+            0%   { transform:translateY(110vh) scale(0); opacity:0; }
+            10%  { opacity:1; }
+            90%  { opacity:0.6; }
+            100% { transform:translateY(-10vh) scale(1); opacity:0; }
+        }
+        .loading-screen { background:var(--g-black) !important; }
+        .loading-brand { font-family:'Orbitron', sans-serif !important; letter-spacing:6px; color:var(--g-white); }
+        .loading-brand span { color:var(--g-cyan); }
+        .loading-bar-fill { background:linear-gradient(90deg,var(--g-cyan),var(--g-gold)) !important; box-shadow:var(--glow-cyan); }
+        .header { background:rgba(4,7,15,0.85) !important; border-bottom:1px solid var(--g-border) !important; backdrop-filter:blur(20px) !important; }
+        .logo-text { font-family:'Orbitron', sans-serif !important; color:var(--g-white) !important; letter-spacing:3px; }
+        .logo-text span { color:var(--g-cyan) !important; }
+        .logo-icon { color:var(--g-cyan) !important; }
+        .nav-link { color:var(--g-text) !important; font-family:'Rajdhani', sans-serif; font-weight:600; letter-spacing:1px; }
+        .nav-link:hover,.nav-link.active { color:var(--g-cyan) !important; text-shadow:0 0 12px rgba(0,228,255,0.6); }
+        .nav-link.active::after { background:var(--g-cyan) !important; }
+        .page-hero { position:relative; min-height:60vh; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+        .page-hero-background { filter:brightness(0.3) saturate(0.6); }
+        .page-hero-overlay { background:linear-gradient(135deg,rgba(0,0,0,0.95) 0%,rgba(0,228,255,0.08) 50%,rgba(255,184,0,0.06) 100%) !important; }
+        .page-hero-content { position:relative; z-index:2; text-align:center; }
+        .page-hero-content h1 {
+            font-family:'Orbitron', sans-serif;
+            font-size:clamp(1.8rem,5vw,4.5rem);
+            font-weight:900;
+            background:linear-gradient(135deg,var(--g-white) 0%,var(--g-cyan) 50%,var(--g-gold) 100%);
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+            letter-spacing:4px;
+            animation:heroReveal 1.2s cubic-bezier(0.22,1,0.36,1) both;
+        }
+        .page-hero-content p { color:var(--g-muted); font-size:1rem; letter-spacing:3px; text-transform:uppercase; margin-top:1rem; animation:heroReveal 1.4s cubic-bezier(0.22,1,0.36,1) both; }
+        @keyframes heroReveal { from{opacity:0;transform:translateY(40px)} to{opacity:1;transform:translateY(0)} }
+        .hero-scanline { position:absolute; bottom:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,var(--g-cyan),var(--g-gold),transparent); animation:scanGlow 3s ease-in-out infinite; }
+        @keyframes scanGlow { 0%,100%{opacity:0.4} 50%{opacity:1;box-shadow:0 0 20px var(--g-cyan)} }
+        .gallery-section { background:var(--g-black) !important; padding:6rem 0; position:relative; }
+        .gallery-section::before { content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:800px; height:400px; background:radial-gradient(ellipse,rgba(0,228,255,0.04),transparent 70%); pointer-events:none; }
+        .section-header { text-align:center; margin-bottom:3rem; }
+        .section-title { font-family:'Orbitron', sans-serif !important; font-size:clamp(1.4rem,3vw,2.2rem) !important; font-weight:700 !important; color:var(--g-white) !important; letter-spacing:3px !important; position:relative; display:inline-block; }
+        .section-title::after { content:''; position:absolute; bottom:-10px; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,var(--g-cyan),var(--g-gold),transparent); animation:scanGlow 4s ease-in-out infinite; }
+        .section-subtitle { color:var(--g-muted) !important; letter-spacing:2px; text-transform:uppercase; font-size:0.82rem !important; margin-top:1.5rem; }
+        .gallery-stats { display:flex; justify-content:center; gap:3rem; margin:2rem 0 3rem; flex-wrap:wrap; }
+        .stat-item { text-align:center; animation:fadeUp 0.8s both; }
+        .stat-item:nth-child(2){animation-delay:0.1s} .stat-item:nth-child(3){animation-delay:0.2s}
+        .stat-number { font-family:'Orbitron', sans-serif; font-size:2rem; font-weight:900; color:var(--g-cyan); text-shadow:var(--glow-cyan); display:block; }
+        .stat-label { font-size:0.72rem; letter-spacing:2px; text-transform:uppercase; color:var(--g-muted); }
+        @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+        .gallery-filters { display:flex; justify-content:center; gap:0.5rem; margin-bottom:3rem; flex-wrap:wrap; }
+        .filter-btn { padding:8px 20px !important; border:1px solid var(--g-border) !important; background:rgba(13,20,38,0.8) !important; color:var(--g-muted) !important; border-radius:4px !important; cursor:pointer; font-family:'Rajdhani', sans-serif !important; font-size:0.85rem !important; font-weight:600 !important; letter-spacing:1.5px !important; text-transform:uppercase !important; transition:all 0.3s ease !important; position:relative; overflow:hidden; }
+        .filter-btn span { position:relative; z-index:1; }
+        .filter-btn::before { content:''; position:absolute; inset:0; background:linear-gradient(135deg,var(--g-cyan),var(--g-gold)); opacity:0; transition:opacity 0.3s ease; }
+        .filter-btn.active,.filter-btn:hover { border-color:var(--g-cyan) !important; color:var(--g-black) !important; box-shadow:var(--glow-cyan) !important; }
+        .filter-btn.active::before,.filter-btn:hover::before { opacity:1; }
+        .filter-btn .ripple { position:absolute; border-radius:50%; background:rgba(255,255,255,0.3); transform:scale(0); animation:rippleA 0.6s linear; pointer-events:none; }
+        @keyframes rippleA { to{transform:scale(4);opacity:0} }
+        .gallery-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(290px,1fr)); gap:1.5rem !important; }
+        .gallery-item { background:var(--g-card) !important; border:1px solid var(--g-border) !important; border-radius:8px !important; overflow:hidden; position:relative; transition:all 0.4s cubic-bezier(0.4,0,0.2,1) !important; opacity:0; transform:translateY(40px) scale(0.96); }
+        .gallery-item.visible { opacity:1; transform:translateY(0) scale(1); }
+        .gallery-item:hover { transform:translateY(-8px) scale(1.01) !important; border-color:var(--g-cyan) !important; box-shadow:var(--glow-cyan),0 20px 60px rgba(0,0,0,0.5) !important; }
+        .gallery-item::before,.gallery-item::after { content:''; position:absolute; width:16px; height:16px; z-index:3; opacity:0; transition:all 0.4s ease; }
+        .gallery-item::before { top:6px; left:6px; border-top:2px solid var(--g-cyan); border-left:2px solid var(--g-cyan); }
+        .gallery-item::after  { bottom:6px; right:6px; border-bottom:2px solid var(--g-gold); border-right:2px solid var(--g-gold); }
+        .gallery-item:hover::before,.gallery-item:hover::after { opacity:1; }
+        .gallery-image-container { position:relative; overflow:hidden; height:240px !important; }
+        .gallery-image-container img { width:100%; height:100%; object-fit:cover; transition:transform 0.6s cubic-bezier(0.4,0,0.2,1) !important; filter:saturate(0.85) brightness(0.95); }
+        .gallery-item:hover .gallery-image-container img { transform:scale(1.12) !important; filter:saturate(1.1) brightness(1.05); }
+        .gallery-image-container::after { content:''; position:absolute; inset:0; background:linear-gradient(105deg,transparent 30%,rgba(0,228,255,0.15) 50%,transparent 70%); transform:translateX(-100%); transition:transform 0.6s ease; pointer-events:none; }
+        .gallery-item:hover .gallery-image-container::after { transform:translateX(100%); }
+        .gallery-overlay { position:absolute; inset:0; background:linear-gradient(135deg,rgba(0,5,15,0.85),rgba(0,50,80,0.7)) !important; display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity 0.4s ease !important; }
+        .gallery-item:hover .gallery-overlay { opacity:1 !important; }
+        .gallery-btn { background:transparent !important; border:2px solid var(--g-cyan) !important; color:var(--g-cyan) !important; width:52px !important; height:52px !important; border-radius:50% !important; font-size:1.1rem !important; cursor:pointer; display:flex; align-items:center; justify-content:center; transform:scale(0.5) translateY(20px); opacity:0; transition:all 0.4s cubic-bezier(0.34,1.56,0.64,1) !important; }
+        .gallery-item:hover .gallery-btn { transform:scale(1) translateY(0) !important; opacity:1 !important; }
+        .gallery-btn:hover { background:var(--g-cyan) !important; color:var(--g-black) !important; box-shadow:var(--glow-cyan) !important; }
+        .gallery-item-info { padding:1rem 1.2rem 1.2rem; position:relative; }
+        .gallery-item h3 { font-family:'Rajdhani', sans-serif; font-size:1rem !important; font-weight:700 !important; color:var(--g-white) !important; letter-spacing:1px; text-transform:uppercase; padding:0 !important; }
+        .gallery-item p { font-size:0.8rem !important; color:var(--g-muted) !important; letter-spacing:0.5px; padding:0.3rem 0 0 !important; }
+        .item-badge { position:absolute; top:-12px; right:12px; background:linear-gradient(135deg,var(--g-cyan),var(--g-gold)); color:var(--g-black); font-family:'Orbitron', sans-serif; font-size:0.52rem; font-weight:700; letter-spacing:1.5px; padding:3px 10px; border-radius:2px; text-transform:uppercase; }
+        .cta-section { background:linear-gradient(135deg,var(--g-dark),var(--g-surface)) !important; border-top:1px solid var(--g-border); border-bottom:1px solid var(--g-border); position:relative; overflow:hidden; }
+        .cta-section::before { content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:500px; height:300px; background:radial-gradient(ellipse,rgba(0,228,255,0.06),transparent 70%); pointer-events:none; }
+        .cta-section h2 { font-family:'Orbitron', sans-serif !important; color:var(--g-white) !important; letter-spacing:2px; }
+        .cta-section p { color:var(--g-muted) !important; }
+        .btn.btn-large { background:linear-gradient(135deg,var(--g-cyan),#007ACC) !important; color:var(--g-black) !important; font-family:'Orbitron', sans-serif !important; font-weight:700 !important; letter-spacing:2px !important; border:none !important; box-shadow:var(--glow-cyan) !important; animation:glowPulse 3s ease-in-out infinite; }
+        .btn.btn-large:hover { background:linear-gradient(135deg,var(--g-gold),#E07000) !important; box-shadow:var(--glow-gold) !important; }
+        @keyframes glowPulse { 0%,100%{box-shadow:0 0 20px rgba(0,228,255,0.2)} 50%{box-shadow:0 0 40px rgba(0,228,255,0.5),0 0 80px rgba(0,228,255,0.2)} }
+        .footer { background:var(--g-dark) !important; border-top:1px solid var(--g-border) !important; }
+        .footer-section h4 { font-family:'Orbitron', sans-serif; color:var(--g-cyan) !important; letter-spacing:2px; font-size:0.72rem; }
+        .footer-section a { color:var(--g-muted) !important; transition:color 0.3s; }
+        .footer-section a:hover { color:var(--g-cyan) !important; }
+        .footer-bottom p { color:var(--g-muted) !important; font-size:0.8rem; letter-spacing:1px; }
+        .footer-tagline { color:var(--g-muted) !important; }
+        .whatsapp-button { background:linear-gradient(135deg,#00C851,#007E33) !important; box-shadow:0 0 20px rgba(0,200,81,0.4) !important; }
+        .scroll-progress { background:linear-gradient(90deg,var(--g-cyan),var(--g-gold)) !important; box-shadow:0 0 10px var(--g-cyan); }
+        .theme-toggle { background:rgba(0,228,255,0.1) !important; border:1px solid var(--g-border) !important; color:var(--g-cyan) !important; }
+        .mobile-fullscreen-menu { background:rgba(4,7,15,0.97) !important; }
+        .mobile-menu-link { color:var(--g-text) !important; font-family:'Orbitron', sans-serif; font-size:1.3rem; letter-spacing:4px; }
+        .mobile-menu-link:hover,.mobile-menu-link.active { color:var(--g-cyan) !important; }
+        @media(max-width:768px){ .gallery-grid{grid-template-columns:repeat(auto-fill,minmax(260px,1fr)) !important;gap:1rem !important;} .gallery-stats{gap:2rem;} }
+    </style>
 </head>
-
 <body class="custom-cursor">
 
-    <!-- LOADING -->
-    <div id="loadingScreen" class="loading-screen">
-        <div class="loading-car">
-            <i class="fas fa-car"></i>
-        </div>
-
-        <div class="loading-bar-container">
-            <div class="loading-bar-fill" id="loadingBarFill"></div>
-        </div>
-
-        <p class="loading-brand">
-            AQUACAR <span>DIGITAL</span>
-        </p>
-    </div>
-
-    <!-- SCROLL BAR -->
-    <div class="scroll-progress" id="scrollProgress"></div>
-
-    <!-- HEADER -->
-    <header class="header" id="mainHeader">
-
-        <div class="container">
-
-            <div class="navbar">
-
-                <!-- LOGO -->
-                <a href="index.html" class="logo">
-                    <div class="logo-icon">
-                        <i class="fas fa-car"></i>
-                    </div>
-
-                    <div class="logo-text">
-                        AQUA<span>CAR</span>
-                    </div>
-                </a>
-
-                <!-- MENU -->
-                <nav class="nav-menu" id="navMenu">
-                    <a href="index.html" class="nav-link">Inicio</a>
-                    <a href="servicios.html" class="nav-link">Servicios</a>
-                    <a href="paquetes.html" class="nav-link">Paquetes</a>
-                    <a href="opiniones.html" class="nav-link">Opiniones</a>
-                    <a href="galeria.html" class="nav-link active">Galería</a>
-                    <a href="extras.html" class="nav-link">Cotiza tu servicio</a>
-                    <a href="contacto.html" class="nav-link">Contacto</a>
-                </nav>
-
-                <!-- ACTIONS -->
-                <div class="nav-actions">
-
-                    <div class="weather-mini">
-                        <i class="fas fa-sun"></i>
-                        <span>24°C</span>
-                    </div>
-
-                    <button class="theme-toggle" id="themeToggle">
-                        <i class="fas fa-moon"></i>
-                    </button>
-
-                    <button class="menu-toggle" id="menuToggle">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </header>
-
-    <!-- MOBILE MENU -->
-    <div class="mobile-fullscreen-menu" id="mobileMenu">
-
-        <a href="index.html" class="mobile-menu-link">Inicio</a>
-
-        <a href="servicios.html" class="mobile-menu-link">Servicios</a>
-
-        <a href="paquetes.html" class="mobile-menu-link">Paquetes</a>
-
-        <a href="opiniones.html" class="mobile-menu-link">Opiniones</a>
-
-        <a href="galeria.html" class="mobile-menu-link active">Galería</a>
-
-        <a href="extras.html" class="mobile-menu-link">Cotiza tu servicio</a>
-
-        <a href="contacto.html" class="mobile-menu-link">Contacto</a>
-
-    </div>
-
-    <!-- HERO -->
-    <section class="page-hero">
-
-        <div class="page-hero-background"
-            style="background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663643512244/hbDWzUPmudCth5Kh98BVHM/aquacar-multipage-gallery-8k4WkSMuR3bwQmUEbXWPvE.webp');">
-
-            <div class="page-hero-overlay"></div>
-
-        </div>
-
-        <div class="page-hero-content">
-
-            <h1>Galería de Transformaciones</h1>
-
-            <p>Antes y después de nuestros servicios premium</p>
-
-        </div>
-
-    </section>
-
-    <!-- GALERÍA -->
-    <section class="gallery-section">
-
-        <div class="container">
-
-            <!-- TITULO -->
-            <div class="section-header">
-
-                <h2 class="section-title">
-                    Nuestras Transformaciones
-                </h2>
-
-                <p class="section-subtitle">
-                    Mira los resultados de nuestro trabajo profesional
-                </p>
-
-            </div>
-
-            <!-- FILTROS -->
-            <div class="gallery-filters">
-
-                <button class="filter-btn active" data-filter="all">Todos</button>
-
-                <button class="filter-btn" data-filter="sedan">Sedanes</button>
-
-                <button class="filter-btn" data-filter="suv">SUVs</button>
-
-                <button class="filter-btn" data-filter="truck">Camionetas</button>
-
-                <button class="filter-btn" data-filter="classic">Clásicos</button>
-
-                <button class="filter-btn" data-filter="sports">Deportivos</button>
-
-                <button class="filter-btn" data-filter="luxury">Lujo</button>
-
-                <button class="filter-btn" data-filter="event">Eventos</button>
-
-            </div>
-
-            <!-- GRID -->
-            <div class="gallery-grid">
-
-                <!-- ITEM -->
-                <div class="gallery-item animate-on-scroll" data-category="sedan">
-
-                    <div class="gallery-image-container">
-
-                        <img src="img/0.png"
-                             alt="Transformación Auto 0"
-                             loading="lazy">
-
-                        <div class="gallery-overlay">
-
-                            <a href="img/0.png"
-                               class="gallery-btn glightbox">
-
-                                <i class="fas fa-search-plus"></i>
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                    <h3>Auto 0</h3>
-
-                    <p>Lavado Completo - Brillo Espejo</p>
-
-                </div>
-
-                <!-- ITEM -->
-                <div class="gallery-item animate-on-scroll" data-category="sports">
-
-                    <div class="gallery-image-container">
-
-                        <img src="img/5.png"
-                             alt="Transformación Auto 5"
-                             loading="lazy">
-
-                        <div class="gallery-overlay">
-
-                            <a href="img/5.png"
-                               class="gallery-btn glightbox">
-
-                                <i class="fas fa-search-plus"></i>
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                    <h3>Auto Deportivo</h3>
-
-                    <p>Detallado Premium Deportivo</p>
-
-                </div>
-
-                <!-- ITEM -->
-                <div class="gallery-item animate-on-scroll" data-category="luxury">
-
-                    <div class="gallery-image-container">
-
-                        <img src="img/6.png"
-                             alt="Transformación Auto 6"
-                             loading="lazy">
-
-                        <div class="gallery-overlay">
-
-                            <a href="img/6.png"
-                               class="gallery-btn glightbox">
-
-                                <i class="fas fa-search-plus"></i>
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                    <h3>Auto Lujo</h3>
-
-                    <p>Protección Cerámica Premium</p>
-
-                </div>
-
-                <!-- ITEM -->
-                <div class="gallery-item animate-on-scroll" data-category="truck">
-
-                    <div class="gallery-image-container">
-
-                        <img src="img/8.png"
-                             alt="Transformación Auto 8"
-                             loading="lazy">
-
-                        <div class="gallery-overlay">
-
-                            <a href="img/8.png"
-                               class="gallery-btn glightbox">
-
-                                <i class="fas fa-search-plus"></i>
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                    <h3>Camioneta Premium</h3>
-
-                    <p>Lavado Completo - Fuerza y Estilo</p>
-
-                </div>
-
-                <!-- EVENTO -->
-                <div class="gallery-item animate-on-scroll" data-category="event">
-
-                    <div class="gallery-image-container">
-
-                        <img src="img/2025-07-02.jpg"
-                             alt="Evento Julio 2025"
-                             loading="lazy">
-
-                        <div class="gallery-overlay">
-
-                            <a href="img/2025-07-02.jpg"
-                               class="gallery-btn glightbox">
-
-                                <i class="fas fa-search-plus"></i>
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                    <h3>Evento Julio 2025</h3>
-
-                    <p>Celebración Especial AQUACAR</p>
-
-                </div>
-
-                <!-- EVENTO -->
-                <div class="gallery-item animate-on-scroll" data-category="event">
-
-                    <div class="gallery-image-container">
-
-                        <img src="img/2025-07-30.jpg"
-                             alt="Evento Julio 2025"
-                             loading="lazy">
-
-                        <div class="gallery-overlay">
-
-                            <a href="img/2025-07-30.jpg"
-                               class="gallery-btn glightbox">
-
-                                <i class="fas fa-search-plus"></i>
-
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                    <h3>Exhibición AQUACAR</h3>
-
-                    <p>Presentación Especial Julio 2025</p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-section">
-
-        <div class="container">
-
-            <h2>¿Tu auto podría verse así?</h2>
-
-            <p>
-                Agenda tu cita ahora y descubre la diferencia
-                que AQUACAR puede hacer
-            </p>
-
-            <a href="contacto.html"
-               class="btn btn-large">
-
-                Agendar Ahora
-
+<div id="particles-bg"></div>
+
+<div id="loadingScreen" class="loading-screen">
+    <div class="loading-car"><i class="fas fa-car"></i></div>
+    <div class="loading-bar-container"><div class="loading-bar-fill" id="loadingBarFill"></div></div>
+    <p class="loading-brand">AQUACAR <span>DIGITAL</span></p>
+</div>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="header" id="mainHeader">
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-car"></i></div>
+                <div class="logo-text">AQUA<span>CAR</span></div>
             </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="servicios.html" class="nav-link">Servicios</a>
+                <a href="paquetes.html" class="nav-link">Paquetes</a>
+                <a href="opiniones.html" class="nav-link">Opiniones</a>
+                <a href="galeria.html" class="nav-link active">Galería</a>
+                <a href="extras.html" class="nav-link">Cotiza tu servicio</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="weather-mini"><i class="fas fa-sun"></i><span>24°C</span></div>
+                <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+                <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </div>
+</header>
 
+<div class="mobile-fullscreen-menu" id="mobileMenu">
+    <a href="index.html" class="mobile-menu-link">Inicio</a>
+    <a href="servicios.html" class="mobile-menu-link">Servicios</a>
+    <a href="paquetes.html" class="mobile-menu-link">Paquetes</a>
+    <a href="opiniones.html" class="mobile-menu-link">Opiniones</a>
+    <a href="galeria.html" class="mobile-menu-link active">Galería</a>
+    <a href="extras.html" class="mobile-menu-link">Cotiza tu servicio</a>
+    <a href="contacto.html" class="mobile-menu-link">Contacto</a>
+</div>
+
+<section class="page-hero">
+    <div class="page-hero-background" style="background-image:url('https://d2xsxph8kpxj0f.cloudfront.net/310519663643512244/hbDWzUPmudCth5Kh98BVHM/aquacar-multipage-gallery-8k4WkSMuR3bwQmUEbXWPvE.webp');">
+        <div class="page-hero-overlay"></div>
+    </div>
+    <div class="page-hero-content">
+        <h1>Galería de Transformaciones</h1>
+        <p>Antes y después de nuestros servicios premium</p>
+    </div>
+    <div class="hero-scanline"></div>
+</section>
+
+<section class="gallery-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Nuestras Transformaciones</h2>
+            <p class="section-subtitle">Mira los resultados de nuestro trabajo profesional</p>
         </div>
 
-    </section>
+        <div class="gallery-stats">
+            <div class="stat-item"><span class="stat-number" data-target="18">0</span><span class="stat-label">Trabajos</span></div>
+            <div class="stat-item"><span class="stat-number" data-target="7">0</span><span class="stat-label">Categorías</span></div>
+            <div class="stat-item"><span class="stat-number" data-target="100">0</span><span class="stat-label">% Satisfacción</span></div>
+        </div>
 
-    <!-- FOOTER -->
-    <footer class="footer">
+        <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all"><span>Todos</span></button>
+            <button class="filter-btn" data-filter="sedan"><span>Sedanes</span></button>
+            <button class="filter-btn" data-filter="suv"><span>SUVs</span></button>
+            <button class="filter-btn" data-filter="truck"><span>Camionetas</span></button>
+            <button class="filter-btn" data-filter="classic"><span>Clásicos</span></button>
+            <button class="filter-btn" data-filter="sports"><span>Deportivos</span></button>
+            <button class="filter-btn" data-filter="luxury"><span>Lujo</span></button>
+            <button class="filter-btn" data-filter="event"><span>Eventos</span></button>
+        </div>
 
-        <div class="container">
+        <div class="gallery-grid" id="galleryGrid">
 
-            <div class="footer-content">
-
-                <div class="footer-brand">
-
-                    <a href="index.html" class="logo">
-
-                        <div class="logo-icon">
-                            <i class="fas fa-car"></i>
-                        </div>
-
-                        <div class="logo-text">
-                            AQUACAR
-                        </div>
-
-                    </a>
-
-                    <p class="footer-tagline">
-                        SISTEMA DE INTERVENCIÓN<br>
-                        AUTOMOTRIZ PREMIUM.
-                    </p>
-
+            <div class="gallery-item" data-category="sedan">
+                <div class="gallery-image-container">
+                    <img src="img/0.png" alt="Sedán Premium" loading="lazy">
+                    <div class="gallery-overlay"><a href="img/0.png" class="gallery-btn glightbox" data-gallery="aquacar"><i class="fas fa-expand"></i></a></div>
                 </div>
-
-                <div class="footer-links-grid">
-
-                    <div class="footer-section">
-
-                        <h4>Sistema</h4>
-
-                        <ul>
-
-                            <li>
-                                <a href="servicios.html">Protocolos</a>
-                            </li>
-
-                            <li>
-                                <a href="paquetes.html">Precios</a>
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <div class="footer-section">
-
-                        <h4>Recursos</h4>
-
-                        <ul>
-
-                            <li>
-                                <a href="opiniones.html">Opiniones</a>
-                            </li>
-
-                            <li>
-                                <a href="galeria.html">Galería</a>
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                    <div class="footer-section">
-
-                        <h4>Cobertura</h4>
-
-                        <ul>
-
-                            <li>
-                                <a href="contacto.html">Ubicación</a>
-                            </li>
-
-                            <li>
-                                <a href="extras.html">Extras</a>
-                            </li>
-
-                        </ul>
-
-                    </div>
-
+                <div class="gallery-item-info">
+                    <span class="item-badge">Sedán</span>
+                    <h3>Sedán Premium</h3>
+                    <p>Lavado Completo · Brillo Espejo</p>
                 </div>
-
             </div>
 
-            <div class="footer-bottom">
+            <div class="gallery-item" data-category="sedan">
+                <div class="gallery-image-container">
+                    <img src="img/0 (1).png" alt="Sedán Detallado" loading="lazy">
+                    <div class="gallery-overlay"><a href="img/0 (1).png" class="gallery-btn glightbox" data-gallery="aquacar"><i class="fas fa-expand"></i></a></div>
+                </div>
+                <div class="gallery-item-info">
+                    <span class="item-badge">Sedán</span>
+                    <h3>Sedán Detallado</h3>
+                    <p>Detallado Exterior · Protección UV</p>
+                </div>
+            </div>
 
-                <p>
-                    © 2026 AQUACAR INTERNATIONAL — SJT HUB
-                </p>
+            <div class="gallery-item" data-category="suv">
+                <div class="gallery-image-container">
+                    <img src="img/1.png" alt="SUV Familiar" loading="lazy">
+                    <div class="gallery-overlay"><a href="img/1.png" class="gallery-btn glightbox" data-gallery="aquacar"><i class="fas fa-expand"></i></a></div>
+                </div>
+                <div class="gallery-item-info">
+                    <span class="item-badge">SUV</span>
+                    <h3>SUV Familiar</h3>
+                    <p>Lavado Interior-Exterior · Pulido</p>
+                </div>
+            </div>
 
+            <div class="gallery-item" data-category="sedan">
+                <div class="gallery-image-container">
+                    <img src="img/2.png" alt="Sedán Sport" loading="lazy">
+                    <div class="gallery-overlay"><a href="img/2.png" class="gallery-btn glightbox" data-gallery="aquacar"><i class="fas fa-expand"></i></a></div>
+                </div>
+                <div class="gallery-item-info">
+                    <span class="item-badge">Sedán</span>
+                    <h3>Sedán Sport</h3>
+                    <p>Encerado Premium · Cristalizado</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="luxury">
+                <div class="gallery-image-container">
+                    <img src="img/3.png" alt="Lujo Detallado" loading="lazy">
+                    <div class="gallery-overlay"><a href="img/3.png" class="gallery-btn glightbox" data-gallery="aquacar"><i class="fas fa-expand"></i></a></div>
+                </div>
+                <div class="gallery-item-info">
+                    <span class="item-badge">Lujo</span>
+                    <h3>Lujo Detallado</h3>
+                    <p>Detallado Completo · Recubrimiento Nano</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="sports">
+                <div class="gallery-image-container">
+                    <img src="img/4.png" alt="Deportivo Elite" loading="lazy">
+                    <div class="gallery-overlay"><a href="img/4.png" class="gallery-btn glightbox" data-gallery="aquacar"><i class="fas fa-expand"></i></a></div>
+                </div>
+                <div class="gallery-item-info">
+                    <span class="item-badge">Deportivo</span>
+                    <h3>Deportivo Elite</h3>
+                    <p>Lavado Sport · Protección Cerámica</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="sports">
+                <div class="gallery-image-container">
+                    <img src="img/5.png" alt="Auto Deportivo" loading="lazy">
+                    <div class="gallery-overlay"><a href="img/5.png" class="gallery-btn glightbox" data-gallery="aquacar"><i class="fas fa-expand"></i></a></div>
+                </div>
+                <div class="gallery-item-info">
+                    <span class="item-badge">Deportivo</span>
+                    <h3>Auto Deportivo</h3>
+                    <p>Detallado Premium Deportivo</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="luxury">
+                <div class="gallery-image-container">
+                    <img src="img/6.png" alt="Auto de Lujo" loading="lazy">
+                    <div class="gallery-overlay"><a href="img/6.png" class="gallery-btn glightbox" data-gallery="aquacar"><i class="fas fa-expand"></i></a></div>
+                </div>
+                <div class="gallery-item-info">
+                    <span class="item-badge">Lujo</span>
+                    <h3>Auto de Lujo</h3>
+                    <p>Protección Cerámica Premium</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="truck">
+                <div class="gallery-image-container">
+                    <img src="img/7.png" alt="Camioneta 4x4" loading="lazy">
+                    <div class="gallery-overlay"><a href="img/7.png" class="gallery-btn glightbox" data-gallery="aquacar"><i class="fas fa-expand"></i></a></div>
+                </div>
+                <div class="gallery-item-info">
+                    <span class="item-badge">Camioneta</span>
+                    <h3>Camioneta 4x4</h3>
+                    <p>Lavado Completo · Tratamiento Barro</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="event">
+                <div class="gallery-image-container">
+                    <img src="img/7.jpg" alt="Evento Especial" loading="lazy">
+                    <div class="gallery-overlay"><a href="img/7.jpg" class="gallery-btn glightbox" data-gallery="aquacar"><i class="fas fa-expand"></i></a></div>
+                </div>
+                <div class="gallery-item-info">
+                    <span class="item-badge">Evento</span>
+                    <h3>Evento Especial</h3>
+                    <p>Exhibición AQUACAR Premium</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="truck">
+                <div class="gallery-image-container">
+                    <img src="img/8.png" alt="Camioneta Premium" loading="lazy">
+                    <div class="gallery-overlay"><a href="img/8.png" class="gallery-btn glightbox" data-gallery="aquacar"><i class="fas fa-expand"></i></a></div>
+                </div>
+                <div class="gallery-item-info">
+                    <span class="item-badge">Camioneta</span>
+                    <h3>Camioneta Premium</h3>
+                    <p>Lavado Completo · Fuerza y Estilo</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="suv">
+                <div class="gallery-image-container">
+                    <img src="img/9.png" alt="SUV Ejecutivo" loading="lazy">
+                    <div class="gallery-overlay"><a href="img/9.png" class="gallery-btn glightbox" data-gallery="aquacar"><i class="fas fa-expand"></i></a></div>
+                </div>
+                <div class="gallery-item-info">
+                    <span class="item-badge">SUV</span>
+                    <h3>SUV Ejecutivo</h3>
+                    <p>Detallado Ejecutivo · Aromatización</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="classic">
+                <div class="gallery-image-container">
+                    <img src="img/10.png" alt="Clásico Restaurado" loading="lazy">
+                    <div class="gallery-overlay"><a href="img/10.png" class="gallery-btn glightbox" data-gallery="aquacar"><i class="fas fa-expand"></i></a></div>
+                </div>
+                <div class="gallery-item-info">
+                    <span class="item-badge">Clásico</span>
+                    <h3>Clásico Restaurado</h3>
+                    <p>Restauración Total · Pintura Rejuvenecida</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="luxury">
+                <div class="gallery-image-container">
+                    <img src="img/11.png" alt="Lujo VIP" loading="lazy">
+                    <div class="gallery-overlay"><a href="img/11.png" class="gallery-btn glightbox" data-gallery="aquacar"><i class="fas fa-expand"></i></a></div>
+                </div>
+                <div class="gallery-item-info">
+                    <span class="item-badge">Lujo</span>
+                    <h3>Lujo VIP</h3>
+                    <p>Paquete Platino · Máxima Protección</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="event">
+                <div class="gallery-image-container">
+                    <img src="img/2025-07-02.jpg" alt="Evento Julio 2025" loading="lazy">
+                    <div class="gallery-overlay"><a href="img/2025-07-02.jpg" class="gallery-btn glightbox" data-gallery="aquacar"><i class="fas fa-expand"></i></a></div>
+                </div>
+                <div class="gallery-item-info">
+                    <span class="item-badge">Evento</span>
+                    <h3>Evento Julio 2025</h3>
+                    <p>Celebración Especial AQUACAR</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="event">
+                <div class="gallery-image-container">
+                    <img src="img/2025-07-30.jpg" alt="Exhibición Julio 2025" loading="lazy">
+                    <div class="gallery-overlay"><a href="img/2025-07-30.jpg" class="gallery-btn glightbox" data-gallery="aquacar"><i class="fas fa-expand"></i></a></div>
+                </div>
+                <div class="gallery-item-info">
+                    <span class="item-badge">Evento</span>
+                    <h3>Exhibición AQUACAR</h3>
+                    <p>Presentación Especial Julio 2025</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="event">
+                <div class="gallery-image-container">
+                    <img src="img/2026-01-26.jpg" alt="Evento Enero 2026" loading="lazy">
+                    <div class="gallery-overlay"><a href="img/2026-01-26.jpg" class="gallery-btn glightbox" data-gallery="aquacar"><i class="fas fa-expand"></i></a></div>
+                </div>
+                <div class="gallery-item-info">
+                    <span class="item-badge">Evento</span>
+                    <h3>Evento Enero 2026</h3>
+                    <p>Apertura de Temporada · AQUACAR</p>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="event">
+                <div class="gallery-image-container">
+                    <img src="img/2026-01-27.jpg" alt="Gala AQUACAR 2026" loading="lazy">
+                    <div class="gallery-overlay"><a href="img/2026-01-27.jpg" class="gallery-btn glightbox" data-gallery="aquacar"><i class="fas fa-expand"></i></a></div>
+                </div>
+                <div class="gallery-item-info">
+                    <span class="item-badge">Evento</span>
+                    <h3>Gala AQUACAR 2026</h3>
+                    <p>Noche de Premiación · Temporada 2026</p>
+                </div>
             </div>
 
         </div>
+    </div>
+</section>
 
-    </footer>
+<section class="cta-section">
+    <div class="container">
+        <h2>¿Tu auto podría verse así?</h2>
+        <p>Agenda tu cita ahora y descubre la diferencia que AQUACAR puede hacer</p>
+        <a href="contacto.html" class="btn btn-large">Agendar Ahora</a>
+    </div>
+</section>
 
-    <!-- WHATSAPP -->
-    <a href="https://wa.me/5543180287"
-       target="_blank"
-       class="whatsapp-button">
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"><i class="fas fa-car"></i></div>
+                    <div class="logo-text">AQUACAR</div>
+                </a>
+                <p class="footer-tagline">SISTEMA DE INTERVENCIÓN<br>AUTOMOTRIZ PREMIUM.</p>
+            </div>
+            <div class="footer-links-grid">
+                <div class="footer-section"><h4>Sistema</h4><ul><li><a href="servicios.html">Protocolos</a></li><li><a href="paquetes.html">Precios</a></li></ul></div>
+                <div class="footer-section"><h4>Recursos</h4><ul><li><a href="opiniones.html">Opiniones</a></li><li><a href="galeria.html">Galería</a></li></ul></div>
+                <div class="footer-section"><h4>Cobertura</h4><ul><li><a href="contacto.html">Ubicación</a></li><li><a href="extras.html">Extras</a></li></ul></div>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 AQUACAR INTERNATIONAL — SJT HUB</p></div>
+    </div>
+</footer>
 
-        <i class="fab fa-whatsapp"></i>
+<a href="https://wa.me/5543180287" target="_blank" class="whatsapp-button"><i class="fab fa-whatsapp"></i></a>
 
-    </a>
+<script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+(function(){
+    const bg=document.getElementById('particles-bg');
+    const colors=['#00E4FF','#FFB800','#0077AA','rgba(0,228,255,0.5)'];
+    for(let i=0;i<35;i++){
+        const p=document.createElement('div');
+        p.className='particle';
+        const size=Math.random()*4+1;
+        const c=colors[Math.floor(Math.random()*colors.length)];
+        p.style.cssText='width:'+size+'px;height:'+size+'px;left:'+Math.random()*100+'%;background:'+c+';animation-duration:'+(8+Math.random()*15)+'s;animation-delay:'+Math.random()*10+'s;box-shadow:0 0 '+(size*3)+'px '+c;
+        bg.appendChild(p);
+    }
+})();
 
-    <!-- JS -->
-    <script src="js/script.js"></script>
+const lightbox=GLightbox({selector:'.glightbox',touchNavigation:true,loop:true,openEffect:'zoom',closeEffect:'fade'});
 
-    <!-- GLIGHTBOX -->
-    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+const filterBtns=document.querySelectorAll('.filter-btn');
+const items=document.querySelectorAll('.gallery-item');
 
-    <script>
-        const lightbox = GLightbox({
-            selector: '.glightbox'
+filterBtns.forEach(btn=>{
+    btn.addEventListener('click',function(e){
+        const r=document.createElement('span');
+        r.className='ripple';
+        const rect=this.getBoundingClientRect();
+        const s=Math.max(rect.width,rect.height);
+        r.style.cssText='width:'+s+'px;height:'+s+'px;top:'+(e.clientY-rect.top-s/2)+'px;left:'+(e.clientX-rect.left-s/2)+'px';
+        this.appendChild(r);
+        setTimeout(()=>r.remove(),600);
+        filterBtns.forEach(b=>b.classList.remove('active'));
+        this.classList.add('active');
+        const f=this.dataset.filter;
+        let delay=0;
+        items.forEach(item=>{
+            const match=f==='all'||item.dataset.category===f;
+            if(!match){ item.style.display='none'; }
+            else{
+                item.style.display='block';
+                item.style.opacity='0';
+                item.style.transform='translateY(30px) scale(0.95)';
+                setTimeout(()=>{
+                    item.style.transition='all 0.45s cubic-bezier(0.34,1.2,0.64,1)';
+                    item.style.opacity='1';
+                    item.style.transform='translateY(0) scale(1)';
+                },delay);
+                delay+=55;
+            }
         });
+    });
+});
 
-        // FILTROS
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const galleryItems = document.querySelectorAll('.gallery-item');
+const io=new IntersectionObserver((entries)=>{
+    entries.forEach((entry,i)=>{
+        if(entry.isIntersecting){
+            setTimeout(()=>{
+                entry.target.style.transition='opacity 0.6s ease, transform 0.6s cubic-bezier(0.34,1.2,0.64,1)';
+                entry.target.classList.add('visible');
+            },i*50);
+            io.unobserve(entry.target);
+        }
+    });
+},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+items.forEach((item,i)=>{ item.style.transitionDelay=i*45+'ms'; io.observe(item); });
 
-        filterButtons.forEach(button => {
+function animCounter(el,target,dur=1800){
+    let v=0; const step=target/(dur/16);
+    const t=setInterval(()=>{
+        v+=step;
+        if(v>=target){v=target;clearInterval(t);}
+        el.textContent=Math.floor(v)+(el.dataset.target==='100'?'%':'');
+    },16);
+}
+const statsObs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+        if(e.isIntersecting){
+            e.target.querySelectorAll('.stat-number').forEach(n=>animCounter(n,parseInt(n.dataset.target)));
+            statsObs.unobserve(e.target);
+        }
+    });
+},{threshold:0.5});
+const statsEl=document.querySelector('.gallery-stats');
+if(statsEl) statsObs.observe(statsEl);
 
-            button.addEventListener('click', () => {
-
-                filterButtons.forEach(btn => {
-                    btn.classList.remove('active');
-                });
-
-                button.classList.add('active');
-
-                const filter = button.dataset.filter;
-
-                galleryItems.forEach(item => {
-
-                    if (
-                        filter === 'all' ||
-                        item.dataset.category === filter
-                    ) {
-
-                        item.style.display = 'block';
-
-                    } else {
-
-                        item.style.display = 'none';
-
-                    }
-
-                });
-
-            });
-
-        });
-    </script>
-
+items.forEach(card=>{
+    card.addEventListener('mousemove',e=>{
+        const r=card.getBoundingClientRect();
+        const x=(e.clientX-r.left)/r.width-0.5;
+        const y=(e.clientY-r.top)/r.height-0.5;
+        card.style.transform='translateY(-8px) scale(1.01) perspective(600px) rotateY('+(x*5)+'deg) rotateX('+(-y*5)+'deg)';
+    });
+    card.addEventListener('mouseleave',()=>{ card.style.transform=''; });
+});
+</script>
 </body>
 </html>
